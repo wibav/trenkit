@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
 
           <div className={styles.section}>
-            <h4>Enlaces</h4>
+            <h4>Links</h4>
             <ul>
               <li>
                 <Link href="/">Home</Link>
@@ -35,10 +35,10 @@ export default function Footer() {
             <h4>Legal</h4>
             <ul>
               <li>
-                <Link href="/privacidad">Privacidad</Link>
+                <Link href="/privacy">Privacy</Link>
               </li>
               <li>
-                <Link href="/terminos">Términos y Condiciones</Link>
+                <Link href="/terms">Terms</Link>
               </li>
             </ul>
           </div>
@@ -47,7 +47,7 @@ export default function Footer() {
         <div className={styles.divider}></div>
 
         <div className={styles.bottom}>
-          <p>&copy; {currentYear} Trenkit. Todos los derechos reservados.</p>
+          <p>&copy; {currentYear} Trenkit. All rights reserved.</p>
         </div>
       </div>
     </footer>

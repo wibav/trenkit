@@ -1,0 +1,64 @@
+@import "@/styles/variables.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+
+  &.default {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  &.minimal {
+    gap: $spacing-md;
+  }
+
+  .success {
+    padding: $spacing-md;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 8px;
+    font-weight: $font-weight-semibold;
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    label {
+      font-weight: $font-weight-semibold;
+      color: $color-blue-dark;
+      font-size: 0.95rem;
+    }
+
+    input,
+    textarea {
+      padding: $spacing-sm;
+      border: 1px solid rgba($color-blue-primary, 0.2);
+      border-radius: 8px;
+      font-family: $font-family-primary;
+      font-size: 1rem;
+      color: $color-blue-dark;
+      transition: $transition-smooth;
+      background-color: $color-white;
+
+      &::placeholder {
+        color: $color-gray-light;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: $color-blue-primary;
+        box-shadow: 0 0 0 3px rgba($color-blue-primary, 0.1);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+  }
+}

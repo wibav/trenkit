@@ -1,0 +1,65 @@
+@import "@/styles/variables.scss";
+
+.footer {
+  @include gradient-primary;
+  color: $color-white;
+  padding: $spacing-2xl 0 $spacing-xl;
+  margin-top: $spacing-2xl;
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-xl;
+    margin-bottom: $spacing-xl;
+
+    @include responsive-tablet {
+      grid-template-columns: 1fr;
+    }
+
+    .section {
+      h4 {
+        font-size: 1.125rem;
+        margin-bottom: $spacing-md;
+        color: $color-white;
+      }
+
+      p {
+        color: rgba($color-white, 0.9);
+        margin-bottom: 0;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          margin-bottom: $spacing-sm;
+
+          a {
+            color: rgba($color-white, 0.9);
+            transition: $transition-smooth;
+
+            &:hover {
+              color: $color-orange-accent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .divider {
+    height: 1px;
+    background-color: rgba($color-white, 0.2);
+    margin-bottom: $spacing-lg;
+  }
+
+  .bottom {
+    text-align: center;
+
+    p {
+      color: rgba($color-white, 0.8);
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@import "@/styles/variables.scss";
+
+.hero {
+  padding-top: 120px;
+  min-height: 50vh;
+  text-align: center;
+  @include flex-center;
+  flex-direction: column;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacing-xl;
+
+  @include responsive-mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.featuresList {
+  list-style: none;
+  margin-top: $spacing-md;
+
+  li {
+    padding: $spacing-xs 0;
+    color: $color-gray-light;
+    font-size: 0.95rem;
+
+    &::before {
+      content: "✓ ";
+      color: $color-orange-accent;
+      font-weight: $font-weight-bold;
+      margin-right: $spacing-xs;
+    }
+  }
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-xl;
+}
+
+.processStep {
+  text-align: center;
+  padding: $spacing-lg;
+  border-radius: 12px;
+  background-color: $color-white;
+  border: 1px solid rgba($color-blue-primary, 0.1);
+  transition: $transition-smooth;
+
+  &:hover {
+    border-color: $color-blue-primary;
+    transform: translateY(-4px);
+  }
+
+  .stepNumber {
+    width: 50px;
+    height: 50px;
+    @include flex-center;
+    @include gradient-primary;
+    color: $color-white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    margin: 0 auto $spacing-md;
+  }
+
+  h3 {
+    color: $color-blue-dark;
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    font-size: 0.95rem;
+    margin: 0;
+  }
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $spacing-lg;
+}
+
+.techCard {
+  background-color: $color-white;
+  padding: $spacing-lg;
+  border-radius: 12px;
+  border: 1px solid rgba($color-blue-primary, 0.1);
+
+  h4 {
+    color: $color-blue-primary;
+    margin-bottom: $spacing-md;
+    font-size: 1.125rem;
+  }
+
+  .techList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+
+    span {
+      display: inline-block;
+      @include gradient-subtle;
+      color: $color-blue-primary;
+      padding: $spacing-xs $spacing-md;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: $font-weight-semibold;
+    }
+  }
+}

@@ -1,0 +1,169 @@
+@import "./variables.scss";
+
+/* Reset y estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-family-primary;
+  background-color: $color-white;
+  color: $color-blue-dark;
+  line-height: 1.6;
+  font-weight: $font-weight-regular;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  margin-bottom: $spacing-md;
+}
+
+h1 {
+  font-size: $font-size-h1;
+  @include responsive-tablet {
+    font-size: 2.5rem;
+  }
+  @include responsive-mobile {
+    font-size: 1.875rem;
+  }
+}
+
+h2 {
+  font-size: $font-size-h2;
+  @include responsive-tablet {
+    font-size: 1.875rem;
+  }
+  @include responsive-mobile {
+    font-size: 1.5rem;
+  }
+}
+
+h3 {
+  font-size: $font-size-h3;
+  @include responsive-tablet {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  margin-bottom: $spacing-md;
+  color: $color-gray-light;
+  font-size: $font-size-body;
+}
+
+a {
+  color: $color-blue-primary;
+  text-decoration: none;
+  transition: $transition-smooth;
+
+  &:hover {
+    color: $color-purple-primary;
+  }
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-gray-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-blue-primary;
+  border-radius: 6px;
+
+  &:hover {
+    background: $color-purple-primary;
+  }
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+
+  @include responsive-tablet {
+    padding: 0 $spacing-md;
+  }
+
+  @include responsive-mobile {
+    padding: 0 $spacing-sm;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 0.8s ease-out forwards;
+}

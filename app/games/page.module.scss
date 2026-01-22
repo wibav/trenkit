@@ -1,0 +1,141 @@
+@import "@/styles/variables.scss";
+
+.hero {
+  padding-top: 120px;
+  min-height: 50vh;
+  text-align: center;
+  @include flex-center;
+  flex-direction: column;
+}
+
+.gamesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-xl;
+}
+
+.featuresList {
+  list-style: none;
+  margin-top: $spacing-md;
+
+  li {
+    padding: $spacing-xs 0;
+    color: $color-gray-light;
+    font-size: 0.95rem;
+
+    &::before {
+      content: "✓ ";
+      color: $color-orange-accent;
+      font-weight: $font-weight-bold;
+      margin-right: $spacing-xs;
+    }
+  }
+}
+
+.engineGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-lg;
+}
+
+.engineCard {
+  background-color: $color-white;
+  padding: $spacing-lg;
+  border-radius: 12px;
+  border: 1px solid rgba($color-blue-primary, 0.1);
+  transition: $transition-smooth;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: $color-blue-primary;
+  }
+
+  h4 {
+    color: $color-blue-primary;
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    font-size: 0.95rem;
+    margin-bottom: $spacing-md;
+  }
+
+  .techTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+
+    span {
+      display: inline-block;
+      background: rgba($color-blue-primary, 0.1);
+      color: $color-blue-primary;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: $font-weight-semibold;
+    }
+  }
+}
+
+.cyclGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $spacing-lg;
+}
+
+.cycleItem {
+  text-align: center;
+  padding: $spacing-lg;
+  background-color: $color-white;
+  border-radius: 12px;
+  border: 1px solid rgba($color-blue-primary, 0.1);
+
+  .cycleNumber {
+    width: 45px;
+    height: 45px;
+    @include flex-center;
+    @include gradient-primary;
+    color: $color-white;
+    border-radius: 50%;
+    font-weight: $font-weight-bold;
+    font-size: 1.25rem;
+    margin: 0 auto $spacing-md;
+  }
+
+  h4 {
+    color: $color-blue-dark;
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    font-size: 0.95rem;
+    margin: 0;
+  }
+}
+
+.monetizationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $spacing-lg;
+}
+
+.monetizationCard {
+  background: linear-gradient(
+    135deg,
+    rgba($color-blue-primary, 0.05) 0%,
+    rgba($color-purple-primary, 0.05) 100%
+  );
+  padding: $spacing-lg;
+  border-radius: 12px;
+  border: 1px solid rgba($color-blue-primary, 0.2);
+
+  h4 {
+    color: $color-blue-primary;
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    font-size: 0.95rem;
+    margin: 0;
+  }
+}

@@ -1,0 +1,64 @@
+@import "@/styles/variables.scss";
+
+.main {
+  margin-top: 70px;
+  min-height: 100vh;
+}
+
+.header {
+  padding-top: 120px !important;
+  @include gradient-primary;
+  color: $color-white;
+  text-align: center;
+
+  h1 {
+    color: $color-white;
+  }
+
+  p {
+    color: rgba($color-white, 0.9);
+  }
+}
+
+.policyContent {
+  h2 {
+    color: $color-blue-dark;
+    margin-top: $spacing-xl;
+    margin-bottom: $spacing-md;
+    font-weight: $font-weight-bold;
+  }
+
+  h3 {
+    color: $color-blue-dark;
+    margin-top: $spacing-lg;
+    margin-bottom: $spacing-md;
+    font-weight: $font-weight-semibold;
+  }
+
+  p {
+    color: $color-gray-light;
+    line-height: 1.8;
+    margin-bottom: $spacing-md;
+  }
+
+  ul {
+    color: $color-gray-light;
+    margin-bottom: $spacing-lg;
+    margin-left: $spacing-lg;
+
+    li {
+      margin-bottom: $spacing-sm;
+      line-height: 1.6;
+
+      ul {
+        margin-top: $spacing-sm;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  strong {
+    color: $color-blue-dark;
+    font-weight: $font-weight-semibold;
+  }
+}

@@ -1,0 +1,39 @@
+@import "@/styles/variables.scss";
+
+.card {
+  background-color: $color-white;
+  border-radius: 12px;
+  padding: $spacing-xl;
+  @include shadow-light;
+  transition: $transition-smooth;
+  border: 1px solid rgba($color-blue-primary, 0.1);
+
+  &:hover {
+    transform: translateY(-8px);
+    @include shadow-hover;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+    @include flex-center;
+    @include gradient-subtle;
+    border-radius: 12px;
+    margin-bottom: $spacing-md;
+    color: $color-blue-primary;
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: $font-size-h3;
+    margin-bottom: $spacing-sm;
+    color: $color-blue-dark;
+  }
+
+  .description {
+    font-size: $font-size-body;
+    color: $color-gray-light;
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+}

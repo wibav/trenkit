@@ -1,225 +1,318 @@
-# Trenkit Landing Page
+# Trenkit - Mobile Apps & Games Development
 
-Landing page profesional y moderna para Trenkit - Desarrollo de Apps y Juegos Móviles.
+Professional and modern landing page for Trenkit, a company specializing in mobile app and video game development.
 
-## 🎨 Características
+## 🎨 Features
 
-- **Next.js 15 con App Router** - Framework React moderno
-- **TypeScript** - Tipado estático para mayor seguridad
-- **SCSS Modules** - Estilos encapsulados y mantenibles
-- **Static Site Generation (SSG)** - `next export` para sitio 100% estático
-- **Firebase Hosting Ready** - Listo para desplegar en Firebase
-- **Responsive Design** - Totalmente adaptable a todos los dispositivos
-- **Animaciones Sutiles** - Transiciones smooth y efectos visuales
-- **SEO Optimizado** - Metadatos por página
-- **Componentes Reutilizables** - Button, Card, Section
+- **Next.js 15 with App Router** - Modern React framework with latest features
+- **TypeScript** - Static typing for enhanced code safety
+- **SCSS Modules** - Encapsulated and maintainable styles
+- **Static Site Generation (SSG)** - `next export` for 100% static site
+- **Firebase Hosting Ready** - Optimized for Firebase deployment
+- **Responsive Design** - Fully adaptive across all devices
+- **Smooth Animations** - Subtle transitions and visual effects
+- **SEO Optimized** - Page-specific metadata and Open Graph tags
+- **Reusable Components** - Button, Card, Section components
+- **Professional Legal Documents** - Privacy Policy (13 sections) and Terms of Service (14 sections)
+- **Fully English** - Complete English localization with no Spanish text
+- **PNG Logo Integration** - High-quality branded logo with shadow effects
 
-## 🎯 Paleta de Colores
+## 🎯 Color Palette
 
 ```
-Azul Principal:      #0A66C2
-Azul Oscuro:         #0B1C2D
-Morado Principal:    #6A38C2
-Morado Suave:        #8B6CF0
-Acento Naranja:      #FF8A00
-Gris Claro:          #8A8F98
-Blanco:              #FFFFFF
+Primary Cyan:        #00AEE9
+Electric Blue:       #3E4BE8
+Purple:              #A044FF
+Orange Accent:       #FF9A3C
+White:               #FFFFFF
 ```
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
 trenkit/
 ├── app/
-│   ├── layout.tsx              # Layout raíz
-│   ├── page.tsx                # Página inicio
+│   ├── layout.tsx              # Root layout with metadata
+│   ├── page.tsx                # Home page
+│   ├── page.module.scss        # Home styles
 │   ├── apps/
-│   │   ├── page.tsx            # Página de Apps
-│   │   └── page.module.scss
+│   │   ├── page.tsx            # Apps development page
+│   │   └── page.module.scss    # Apps styles
 │   ├── games/
-│   │   ├── page.tsx            # Página de Games
-│   │   └── page.module.scss
-│   ├── privacidad/
-│   │   ├── page.tsx            # Política de Privacidad
-│   │   └── page.module.scss
-│   └── terminos/
-│       ├── page.tsx            # Términos y Condiciones
-│       └── page.module.scss
+│   │   ├── page.tsx            # Game development page
+│   │   └── page.module.scss    # Games styles
+│   ├── privacy/
+│   │   ├── page.tsx            # Privacy Policy (13 sections)
+│   │   └── page.module.scss    # Privacy styles
+│   └── terms/
+│       ├── page.tsx            # Terms of Service (14 sections)
+│       └── page.module.scss    # Terms styles
 ├── components/
-│   ├── Navbar.tsx              # Navbar fija
+│   ├── Navbar.tsx              # Fixed navigation bar
 │   ├── Navbar.module.scss
-│   ├── Footer.tsx              # Footer
+│   ├── Footer.tsx              # Footer with links
 │   ├── Footer.module.scss
-│   ├── Button.tsx              # Botón reutilizable
+│   ├── Button.tsx              # Reusable button component
 │   ├── Button.module.scss
-│   ├── Card.tsx                # Tarjeta reutilizable
+│   ├── Card.tsx                # Reusable card component
 │   ├── Card.module.scss
-│   ├── Section.tsx             # Sección reutilizable
+│   ├── Section.tsx             # Reusable section component
 │   └── Section.module.scss
 ├── styles/
-│   ├── variables.scss          # Variables y mixins
-│   └── globals.scss            # Estilos globales
+│   ├── variables.scss          # SCSS variables and mixins
+│   └── globals.scss            # Global styles
+├── public/
+│   ├── favicon.svg             # Favicon
+│   ├── icon.svg                # App icon
+│   ├── logo-trenkit.svg        # SVG logo
+│   └── trenkit_logo.png        # PNG logo with transparent background
 ├── package.json
 ├── tsconfig.json
 ├── next.config.mjs
-└── .eslintrc.json
+├── firebase.json               # Firebase configuration
+├── eslint.config.mjs           # ESLint configuration
+└── README.md                   # This file
 ```
 
-## 🚀 Instalación
+## 🚀 Installation & Setup
 
-1. **Clonar o descargar el proyecto**
+### Prerequisites
+
+- Node.js 18+ or higher
+- npm or yarn package manager
+- Firebase CLI (for deployment)
+
+### 1. Clone or Download the Project
 
 ```bash
 cd trenkit
 ```
 
-2. **Instalar dependencias**
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-## 📝 Desarrollo
+## 📝 Development
+
+### Start Development Server
 
 ```bash
-# Ejecutar servidor de desarrollo
 npm run dev
 ```
 
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the site in development mode.
 
-## 🏗️ Build Estático
+The page auto-updates when you edit files.
+
+## 🏗️ Production Build
+
+### Generate Static Site
 
 ```bash
-# Generar sitio estático
 npm run build
 ```
 
-Esto genera los archivos en la carpeta `out/` listos para desplegar.
+This generates optimized files in the `out/` folder ready for deployment:
+- 9 static pages (home, apps, games, privacy, terms, 404, and system pages)
+- ~111 KB First Load JS per route
+- ~102 KB shared JavaScript chunks
 
-## 🔥 Despliegue en Firebase Hosting
+## 🔥 Firebase Hosting Deployment
 
-### 1. Inicializar Firebase (primera vez)
+### Prerequisites
 
 ```bash
 npm install -g firebase-tools
 firebase login
-firebase init hosting
 ```
 
-En las preguntas:
+### Deployment Steps
 
-- **What do you want to use as your public directory?** → `out`
-- **Configure as a single-page app?** → `No`
-- **Set up automatic builds and deploys with GitHub?** → `No` (opcional)
-
-### 2. Crear `firebase.json`
-
-```json
-{
-  "hosting": {
-    "public": "out",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "cleanUrls": true,
-    "trailingSlash": false
-  }
-}
-```
-
-### 3. Desplegar
+1. **Build the project**
 
 ```bash
-# Build del proyecto
 npm run build
+```
 
-# Desplegar en Firebase
+2. **Deploy to Firebase**
+
+```bash
 firebase deploy
 ```
 
-## 📋 Secciones Disponibles
+The site will be deployed to Firebase Hosting and accessible at your Firebase URL.
 
-### Home (/)
+### Firebase Configuration
 
-- Hero section con CTA principal
-- Sección de Apps
-- Sección de Games
-- About Trenkit
+Project uses `firebase.json` with:
+- Public directory: `out/`
+- Clean URLs enabled (no `.html` extensions)
+- Trailing slashes disabled
 
-### Apps (/apps)
+## 📋 Pages & Routes
 
-- Servicios de desarrollo de apps
-- Proceso de desarrollo
-- Tecnologías utilizadas
+| Route | Description | Sections |
+|-------|-------------|----------|
+| `/` | Home / Landing Page | Hero, Apps, Games, About |
+| `/apps` | App Development Services | React Native, React Web, Vue.js, Web Tech |
+| `/games` | Game Development Services | Unity Games, Casual Games, 2D/3D Development |
+| `/privacy` | Privacy Policy | 13 comprehensive sections covering data protection |
+| `/terms` | Terms of Service | 14 sections covering usage, liability, disputes |
+| `/404` | Not Found Page | Auto-generated for invalid routes |
 
-### Games (/games)
+## 📄 Legal Documents
 
-- Tipos de juegos
-- Motores y tecnologías
-- Ciclo de desarrollo
-- Estrategias de monetización
+### Privacy Policy (`/privacy`)
 
-### Privacidad (/privacidad)
+13 comprehensive sections including:
+1. Contact information
+2. Information collection (direct, automatic, third-party)
+3. Why we collect information
+4. Who can see your information
+5. Data security measures
+6. Data retention policies
+7. Children's privacy protection
+8. Cookies and tracking technologies
+9. International data transfers
+10. Your rights and choices
+11. Third-party links
+12. Policy changes
+13. Last updated date
 
-- Política de privacidad completa
-- Apto para Google Play y App Store
+### Terms of Service (`/terms`)
 
-### Términos (/terminos)
+14 professional sections including:
+1. Agreement to terms
+2. Use of service (license, account, prohibited activities, termination)
+3. Ownership and intellectual property
+4. Virtual items and purchases
+5. User content and moderation
+6. Disclaimers and warranties
+7. Limitation of liability
+8. Indemnification
+9. Dispute resolution (informal, arbitration, governing law)
+10. Modifications to terms
+11. Severability
+12. Entire agreement
+13. Contact information
+14. Effective date
 
-- Términos y condiciones
-- Apto para Google Play y App Store
+## 🎨 Customization
 
-## 🎨 Personalización
+### Changing Global Colors
 
-### Cambiar colores globales
-
-Editar `styles/variables.scss`:
+Edit `styles/variables.scss`:
 
 ```scss
-$color-blue-primary: #0a66c2;
-$color-purple-primary: #6a38c2;
-// etc...
+$color-blue-primary: #00AEE9;      // Cyan primary
+$color-blue-dark: #3E4BE8;         // Electric blue
+$color-purple-primary: #A044FF;    // Purple accent
+$color-orange-primary: #FF9A3C;    // Orange accent
 ```
 
-### Modificar tipografía
+### Modifying Typography
 
-En `styles/globals.scss`:
+In `styles/globals.scss`:
 
 ```scss
-$font-family-primary: "Poppins", sans-serif;
+$font-family-primary: "Inter", sans-serif;
+$font-size-base: 16px;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
 ```
+
+### Updating Logo
+
+1. Replace `public/trenkit_logo.png` with your logo (PNG with transparent background)
+2. Logo styling is in `app/page.module.scss` (.logoContainer)
+3. Logo display height is 400px × 400px
 
 ## 📱 Responsive Breakpoints
 
-- **Mobile**: hasta 640px
-- **Tablet**: hasta 768px
-- **Desktop**: desde 1024px
-- **Large**: desde 1280px
+- **Mobile**: up to 640px
+- **Tablet**: up to 768px
+- **Desktop**: from 1024px
+- **Large Desktop**: from 1280px
 
-## 🔍 SEO
+## 🔍 SEO & Performance
 
-Cada página tiene metadatos configurados:
+### Each page includes:
+- Custom title and description metadata
+- Open Graph tags for social sharing
+- Twitter Card support
+- Canonical URLs
+- Structured data ready
 
-- Título personalizado
-- Descripción
-- Keywords
-- Open Graph
+### Performance Metrics:
+- Static pages with minimal JavaScript
+- ~111 KB First Load JS per route
+- ~102 KB shared chunks (optimized)
+- Fast Time to First Byte (TTFB)
 
-## 🎯 Próximos Pasos
+## 🐛 Common Issues & Fixes
 
-1. Reemplazar el contenido de texto con información real de Trenkit
-2. Agregar imágenes y branding del logo
-3. Personalizar datos de contacto
-4. Agregar formulario de contacto
-5. Integrar Google Analytics
-6. Configurar dominio personalizado
+### Routes Not Working
 
-## 📞 Contacto
+If routes like `/privacy` or `/terms` don't work:
 
-Para más información:
+1. Verify the folder structure in `app/` directory
+2. Ensure `page.tsx` exists in each route folder
+3. Clear browser cache: `Ctrl+Shift+Delete` or `Cmd+Shift+Delete`
+4. Rebuild with `npm run build`
 
-- **Email**: info@trenkit.com
-- **Sitio**: trenkit.com
+### Build Errors
+
+If build fails:
+
+```bash
+# Clear Next.js cache
+rm -rf .next
+npm run build
+```
+
+### Footer Links Incorrect
+
+Edit `components/Footer.tsx` and update the `href` attributes:
+- Change `/privacidad` to `/privacy`
+- Change `/terminos` to `/terms`
+- Update link text from Spanish to English
+
+## 📚 Tech Stack
+
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: SCSS Modules
+- **Deployment**: Firebase Hosting
+- **Version Control**: Git
+- **Package Manager**: npm
+
+## 🎯 Future Enhancements
+
+1. ✅ English localization (Complete)
+2. ✅ Professional privacy policy (Complete)
+3. ✅ Professional terms of service (Complete)
+4. ✅ PNG logo integration (Complete)
+5. ⚠️ Sass deprecation warnings (Optional: convert @import to @use/@forward)
+6. 💡 Contact form integration
+7. 💡 Blog/Case studies section
+8. 💡 Multi-language support (Spanish/English switcher)
+9. 💡 Google Analytics integration
+10. 💡 Custom domain setup
+
+## 📞 Contact & Support
+
+- **Email**: contact@trenkit.com
+- **Website**: https://trenkit.com
+- **GitHub**: Repository tracking and version control
+
+## 📝 License
+
+Trenkit Landing Page - All rights reserved © 2026 Trenkit
 
 ---
 
-**Creado para Trenkit - Aplicaciones y Juegos Móviles**
+**Built with Next.js, TypeScript, and SCSS. Deployed on Firebase Hosting.**
+
+**Last Updated**: January 22, 2026

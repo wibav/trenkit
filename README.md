@@ -115,6 +115,7 @@ npm run build
 ```
 
 This generates optimized files in the `out/` folder ready for deployment:
+
 - 9 static pages (home, apps, games, privacy, terms, 404, and system pages)
 - ~111 KB First Load JS per route
 - ~102 KB shared JavaScript chunks
@@ -147,26 +148,28 @@ The site will be deployed to Firebase Hosting and accessible at your Firebase UR
 ### Firebase Configuration
 
 Project uses `firebase.json` with:
+
 - Public directory: `out/`
 - Clean URLs enabled (no `.html` extensions)
 - Trailing slashes disabled
 
 ## 📋 Pages & Routes
 
-| Route | Description | Sections |
-|-------|-------------|----------|
-| `/` | Home / Landing Page | Hero, Apps, Games, About |
-| `/apps` | App Development Services | React Native, React Web, Vue.js, Web Tech |
-| `/games` | Game Development Services | Unity Games, Casual Games, 2D/3D Development |
-| `/privacy` | Privacy Policy | 13 comprehensive sections covering data protection |
-| `/terms` | Terms of Service | 14 sections covering usage, liability, disputes |
-| `/404` | Not Found Page | Auto-generated for invalid routes |
+| Route      | Description               | Sections                                           |
+| ---------- | ------------------------- | -------------------------------------------------- |
+| `/`        | Home / Landing Page       | Hero, Apps, Games, About                           |
+| `/apps`    | App Development Services  | React Native, React Web, Vue.js, Web Tech          |
+| `/games`   | Game Development Services | Unity Games, Casual Games, 2D/3D Development       |
+| `/privacy` | Privacy Policy            | 13 comprehensive sections covering data protection |
+| `/terms`   | Terms of Service          | 14 sections covering usage, liability, disputes    |
+| `/404`     | Not Found Page            | Auto-generated for invalid routes                  |
 
 ## 📄 Legal Documents
 
 ### Privacy Policy (`/privacy`)
 
 13 comprehensive sections including:
+
 1. Contact information
 2. Information collection (direct, automatic, third-party)
 3. Why we collect information
@@ -184,6 +187,7 @@ Project uses `firebase.json` with:
 ### Terms of Service (`/terms`)
 
 14 professional sections including:
+
 1. Agreement to terms
 2. Use of service (license, account, prohibited activities, termination)
 3. Ownership and intellectual property
@@ -206,10 +210,10 @@ Project uses `firebase.json` with:
 Edit `styles/variables.scss`:
 
 ```scss
-$color-blue-primary: #00AEE9;      // Cyan primary
-$color-blue-dark: #3E4BE8;         // Electric blue
-$color-purple-primary: #A044FF;    // Purple accent
-$color-orange-primary: #FF9A3C;    // Orange accent
+$color-blue-primary: #00aee9; // Cyan primary
+$color-blue-dark: #3e4be8; // Electric blue
+$color-purple-primary: #a044ff; // Purple accent
+$color-orange-primary: #ff9a3c; // Orange accent
 ```
 
 ### Modifying Typography
@@ -239,6 +243,7 @@ $font-weight-bold: 700;
 ## 🔍 SEO & Performance
 
 ### Each page includes:
+
 - Custom title and description metadata
 - Open Graph tags for social sharing
 - Twitter Card support
@@ -246,6 +251,7 @@ $font-weight-bold: 700;
 - Structured data ready
 
 ### Performance Metrics:
+
 - Static pages with minimal JavaScript
 - ~111 KB First Load JS per route
 - ~102 KB shared chunks (optimized)
@@ -275,6 +281,7 @@ npm run build
 ### Footer Links Incorrect
 
 Edit `components/Footer.tsx` and update the `href` attributes:
+
 - Change `/privacidad` to `/privacy`
 - Change `/terminos` to `/terms`
 - Update link text from Spanish to English

@@ -152,15 +152,15 @@ export default function GamesPage() {
               <div className={styles.techTags}>
                 <span>GDScript</span>
                 <span>2D/3D</span>
-                <span>Ligero</span>
+                <span>Lightweight</span>
                 <span>Open Source</span>
               </div>
             </div>
             <div className={styles.engineCard}>
-              <h4>Custom</h4>
+              <h4>Custom Solutions</h4>
               <p>
-                Desarrollo personalizado con tecnologías a medida según
-                requerimientos específicos del juego.
+                Custom development with tailored technologies according to specific
+                game requirements.
               </p>
               <div className={styles.techTags}>
                 <span>WebGL</span>
@@ -172,83 +172,80 @@ export default function GamesPage() {
           </div>
         </Section>
 
-        {/* Ciclo de Desarrollo */}
-        <Section title="Ciclo de Desarrollo de Juegos" variant="light">
+        {/* Game Development Cycle */}
+        <Section title="Game Development Cycle" variant="light">
           <div className={styles.cyclGrid}>
             <div className={styles.cycleItem}>
               <div className={styles.cycleNumber}>1</div>
-              <h4>Concepto</h4>
+              <h4>Concept</h4>
               <p>
-                Brainstorming, análisis de mercado y definición del concepto del
-                juego.
+                Brainstorming, market analysis, and game concept definition.
               </p>
             </div>
             <div className={styles.cycleItem}>
               <div className={styles.cycleNumber}>2</div>
               <h4>Game Design</h4>
               <p>
-                Documento de diseño, mecánicas, progresión y objetivos de
-                gameplay.
+                Design document, mechanics, progression, and gameplay objectives.
               </p>
             </div>
             <div className={styles.cycleItem}>
               <div className={styles.cycleNumber}>3</div>
-              <h4>Prototipo</h4>
+              <h4>Prototype</h4>
               <p>
-                Prototipo jugable para validar mecánicas y experiencia de
-                usuario.
+                Playable prototype to validate mechanics and user experience.
               </p>
             </div>
             <div className={styles.cycleItem}>
               <div className={styles.cycleNumber}>4</div>
-              <h4>Producción</h4>
+              <h4>Production</h4>
               <p>
-                Desarrollo completo de arte, audio, código y sistemas del juego.
+                Full development of art, audio, code, and game systems.
               </p>
             </div>
             <div className={styles.cycleItem}>
               <div className={styles.cycleNumber}>5</div>
               <h4>Testing</h4>
-              <p>QA, bug fixing, optimización de rendimiento y playtesting.</p>
+              <p>QA, bug fixes, performance optimization, and playtesting.</p>
             </div>
             <div className={styles.cycleItem}>
               <div className={styles.cycleNumber}>6</div>
-              <h4>Lanzamiento</h4>
+              <h4>Launch</h4>
               <p>
-                Publicación en stores, marketing y estrategia de monetización.
+                Publishing to app stores, marketing, and monetization strategy.
               </p>
             </div>
           </div>
         </Section>
 
-        {/* Monetización */}
-        <Section title="Estrategias de Monetización">
+        {/* Monetization */}
+        <Section title="Monetization Strategies">
           <div className={styles.monetizationGrid}>
             <div className={styles.monetizationCard}>
-              <h4>Publicidad Integrada</h4>
+              <h4>Integrated Advertising</h4>
               <p>
-                Banners, intersticiales y rewarded ads que generan ingresos sin
-                afectar la experiencia.
+                Banners, interstitials, and rewarded ads that generate revenue
+                without affecting experience.
               </p>
             </div>
             <div className={styles.monetizationCard}>
-              <h4>Compras In-App</h4>
+              <h4>In-App Purchases</h4>
               <p>
-                Skins, power-ups, coins y contenido premium dentro del juego.
+                Skins, power-ups, coins, and premium content within the game.
               </p>
             </div>
             <div className={styles.monetizationCard}>
-              <h4>Suscripciones</h4>
+              <h4>Subscriptions</h4>
               <p>
-                Pases de batalla, membresías y acceso a contenido exclusivo con
-                renovación periódica.
+                Battle passes, memberships, and access to exclusive content with
+                periodic renewal.
               </p>
             </div>
             <div className={styles.monetizationCard}>
-              <h4>Híbrido</h4>
+              <h4>Hybrid Model</h4>
               <p>
-                Combinación de múltiples estrategias para maximizar ingresos
-                según el perfil de usuario.
+                Combination of multiple strategies to maximize revenue based on
+                user profile.
               </p>
             </div>
           </div>

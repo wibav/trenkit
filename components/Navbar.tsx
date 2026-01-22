@@ -31,10 +31,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className={styles.logo}>
             <Image
-              src="/logo-trenkit.svg"
+              src="/trenkit_logo.png"
               alt="Trenkit Apps & Games logo"
-              width={140}
-              height={48}
+              width={100}
+              height={100}
               priority
             />
           </Link>

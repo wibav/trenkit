@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Section from "@/components/Section";
@@ -49,28 +50,14 @@ export default function Home() {
             </div>
             <div className={styles.heroImage}>
               <div className={styles.placeholder}>
-                <svg
-                  viewBox="0 0 400 400"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="50"
-                    y="50"
-                    width="300"
-                    height="300"
-                    rx="30"
-                    fill="rgba(255,255,255,0.1)"
-                    stroke="rgba(255,255,255,0.3)"
-                    strokeWidth="2"
-                  />
-                  <circle
-                    cx="200"
-                    cy="200"
-                    r="60"
-                    fill="rgba(255,255,255,0.2)"
-                  />
-                </svg>
+                <Image
+                  src="/trenkit_logo.png"
+                  alt="Trenkit - Apps and Games Development"
+                  width={400}
+                  height={400}
+                  priority
+                  style={{ width: "100%", height: "auto" }}
+                />
               </div>
             </div>
           </div>

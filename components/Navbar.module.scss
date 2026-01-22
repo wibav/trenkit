@@ -14,25 +14,28 @@
   .content {
     @include flex-center;
     justify-content: space-between;
+    align-items: center;
     height: 100%;
+    padding: 0 $spacing-lg;
   }
 
   .logo {
-    font-size: 1.5rem;
-    font-weight: $font-weight-bold;
-    @include gradient-primary;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-shrink: 0;
 
-    span {
-      display: inline-block;
+    img {
+      width: auto;
+      display: block;
     }
   }
 
   .nav {
-    @include flex-center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: $spacing-xl;
 
     @include responsive-tablet {

@@ -13,7 +13,7 @@ export default function Footer() {
         <div className={styles.content}>
           <div className={styles.section}>
             <h4>Trenkit</h4>
-            <p>Creamos apps y juegos móviles que impulsan tu idea.</p>
+            <p>We create mobile apps and games that empower your idea.</p>
           </div>
 
           <div className={styles.section}>

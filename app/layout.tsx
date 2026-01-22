@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://trenkit.com"),
-  title: "Trenkit - Apps y Juegos Móviles",
+  title: "Trenkit - Mobile Apps & Games Development",
   description:
-    "Creamos aplicaciones móviles y videojuegos innovadores que impulsan tu idea. Servicios de desarrollo para iOS, Android y cross-platform.",
+    "We create innovative mobile applications and video games that empower your idea. Professional development services for iOS, Android, and cross-platform.",
   keywords:
-    "apps móviles, juegos móviles, desarrollo Android, desarrollo iOS, videojuegos",
+    "mobile apps, mobile games, Android development, iOS development, video games",
   authors: [{ name: "Trenkit" }],
   creator: "Trenkit",
   icons: {
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "es_ES",
+    locale: "en_US",
     url: "https://trenkit.com",
     siteName: "Trenkit",
-    title: "Trenkit - Apps y Juegos Móviles",
+    title: "Trenkit - Mobile Apps & Games Development",
     description:
-      "Creamos aplicaciones móviles y videojuegos innovadores que impulsan tu idea.",
+      "We create innovative mobile applications and video games that empower your idea.",
     images: [
       {
         url: "/og-image.png",
@@ -40,11 +40,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0A66C2" />
+        <meta name="theme-color" content="#00AEE9" />
       </head>
       <body>{children}</body>
     </html>

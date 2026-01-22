@@ -31,8 +31,8 @@ export default function TermsPage() {
               development services (collectively, the &quot;Service&quot;)
               operated by Trenkit (&quot;Company&quot;, &quot;We&quot;,
               &quot;Us&quot;, or &quot;Our&quot;). By accessing, downloading, or
-              using the Service, you agree to be bound by these Terms. If you
-              do not agree to these Terms, please do not use the Service.
+              using the Service, you agree to be bound by these Terms. If you do
+              not agree to these Terms, please do not use the Service.
             </p>
 
             <h2>1. Use of the Service</h2>
@@ -46,9 +46,12 @@ export default function TermsPage() {
             </p>
             <ul>
               <li>Modify, copy, or adapt the Service or its content</li>
-              <li>Use the Service for commercial purposes without permission</li>
               <li>
-                Reverse engineer, decompile, or attempt to derive the source code
+                Use the Service for commercial purposes without permission
+              </li>
+              <li>
+                Reverse engineer, decompile, or attempt to derive the source
+                code
               </li>
               <li>
                 Remove, obscure, or alter any proprietary notices or labels
@@ -62,23 +65,19 @@ export default function TermsPage() {
               If you create an account on our Service, you are responsible for:
             </p>
             <ul>
-              <li>
-                Maintaining the confidentiality of your login credentials
-              </li>
+              <li>Maintaining the confidentiality of your login credentials</li>
               <li>All activities that occur under your account</li>
               <li>Notifying us immediately of unauthorized access</li>
               <li>
-                Ensuring that all information you provide is accurate and up
-                to date
+                Ensuring that all information you provide is accurate and up to
+                date
               </li>
             </ul>
 
             <h3>1.3 Prohibited Activities</h3>
             <p>You agree NOT to:</p>
             <ul>
-              <li>
-                Harass, abuse, or threaten other users or Trenkit staff
-              </li>
+              <li>Harass, abuse, or threaten other users or Trenkit staff</li>
               <li>
                 Post abusive, threatening, obscene, defamatory, or offensive
                 content
@@ -98,18 +97,16 @@ export default function TermsPage() {
                 Post content that infringes on intellectual property rights
               </li>
               <li>Use the Service for gambling or betting purposes</li>
-              <li>
-                Collect or solicit personal information from other users
-              </li>
+              <li>Collect or solicit personal information from other users</li>
             </ul>
 
             <h3>1.4 Termination</h3>
             <p>
               We reserve the right to suspend or terminate your account and
               access to the Service at any time, without notice, if we believe
-              you have violated these Terms or engaged in illegal activity.
-              Upon termination, your right to use the Service immediately ends,
-              and you will not be entitled to refunds for any virtual items,
+              you have violated these Terms or engaged in illegal activity. Upon
+              termination, your right to use the Service immediately ends, and
+              you will not be entitled to refunds for any virtual items,
               purchases, or account balances.
             </p>
 
@@ -160,8 +157,8 @@ export default function TermsPage() {
               All purchases of Virtual Items, in-app content, or other digital
               products are final and non-refundable. We are not responsible for
               lost, unused, or expired Virtual Items. Trenkit may modify,
-              eliminate, or adjust Virtual Items at any time without compensation
-              to you.
+              eliminate, or adjust Virtual Items at any time without
+              compensation to you.
             </p>
 
             <h3>3.3 Payment Terms</h3>
@@ -202,16 +199,12 @@ export default function TermsPage() {
             </p>
 
             <h3>5.2 No Guarantees</h3>
-            <p>
-              We do not guarantee that:
-            </p>
+            <p>We do not guarantee that:</p>
             <ul>
               <li>The Service will always be available or accessible</li>
               <li>Bugs or defects will be corrected</li>
               <li>Your data will never be lost or corrupted</li>
-              <li>
-                The Service will meet your specific needs or expectations
-              </li>
+              <li>The Service will meet your specific needs or expectations</li>
             </ul>
 
             <h2>6. Limitation of Liability</h2>
@@ -287,7 +280,8 @@ export default function TermsPage() {
               We may terminate or suspend your account and access to the Service
               at any time and for any reason, including if we believe you have
               violated these Terms. Upon termination, all rights granted to you
-              are immediately revoked, and you must cease all use of the Service.
+              are immediately revoked, and you must cease all use of the
+              Service.
             </p>
 
             <h2>11. Severability</h2>
@@ -300,9 +294,9 @@ export default function TermsPage() {
             <h2>12. Entire Agreement</h2>
             <p>
               These Terms, together with our Privacy Policy and any other
-              policies referenced herein, constitute the entire agreement between
-              you and Trenkit regarding the Service and supersede all prior
-              agreements and understandings.
+              policies referenced herein, constitute the entire agreement
+              between you and Trenkit regarding the Service and supersede all
+              prior agreements and understandings.
             </p>
 
             <h2>13. Contact Us</h2>

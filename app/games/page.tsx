@@ -159,8 +159,8 @@ export default function GamesPage() {
             <div className={styles.engineCard}>
               <h4>Custom Solutions</h4>
               <p>
-                Custom development with tailored technologies according to specific
-                game requirements.
+                Custom development with tailored technologies according to
+                specific game requirements.
               </p>
               <div className={styles.techTags}>
                 <span>WebGL</span>
@@ -186,7 +186,8 @@ export default function GamesPage() {
               <div className={styles.cycleNumber}>2</div>
               <h4>Game Design</h4>
               <p>
-                Design document, mechanics, progression, and gameplay objectives.
+                Design document, mechanics, progression, and gameplay
+                objectives.
               </p>
             </div>
             <div className={styles.cycleItem}>
@@ -199,9 +200,7 @@ export default function GamesPage() {
             <div className={styles.cycleItem}>
               <div className={styles.cycleNumber}>4</div>
               <h4>Production</h4>
-              <p>
-                Full development of art, audio, code, and game systems.
-              </p>
+              <p>Full development of art, audio, code, and game systems.</p>
             </div>
             <div className={styles.cycleItem}>
               <div className={styles.cycleNumber}>5</div>

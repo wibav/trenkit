@@ -77,8 +77,8 @@ export default function AppsPage() {
             }}
           >
             We create world-class applications for iOS, Android, and Web. Our
-            specialized team transforms your idea into high-performance, production-ready
-            products.
+            specialized team transforms your idea into high-performance,
+            production-ready products.
           </p>
         </Section>
 

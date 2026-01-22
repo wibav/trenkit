@@ -27,10 +27,10 @@ export default function PrivacyPage() {
             <h2>Welcome to Trenkit&apos;s Privacy Policy</h2>
             <p>
               Thank you for using Trenkit (&quot;Company&quot;, &quot;We&quot;,
-              &quot;Us&quot;, or &quot;Our&quot;). We are committed to protecting
-              your privacy and ensuring transparency about how we collect, use,
-              and protect your personal information. This Privacy Policy
-              describes:
+              &quot;Us&quot;, or &quot;Our&quot;). We are committed to
+              protecting your privacy and ensuring transparency about how we
+              collect, use, and protect your personal information. This Privacy
+              Policy describes:
             </p>
             <ul>
               <li>
@@ -101,7 +101,8 @@ export default function PrivacyPage() {
               <li>Location data (approximate location based on IP address)</li>
               <li>Cookies and similar tracking technologies</li>
               <li>
-                Usage data (pages visited, features used, time spent, interactions)
+                Usage data (pages visited, features used, time spent,
+                interactions)
               </li>
               <li>Device identifiers (including advertising identifiers)</li>
             </ul>
@@ -199,8 +200,8 @@ export default function PrivacyPage() {
 
             <h3>Opt-Out of Targeted Advertising</h3>
             <p>
-              You can limit tracking for targeted advertising through your device
-              settings:
+              You can limit tracking for targeted advertising through your
+              device settings:
             </p>
             <ul>
               <li>iOS: Enable &quot;Limit Ad Tracking&quot;</li>
@@ -215,8 +216,8 @@ export default function PrivacyPage() {
 
             <h3>Correct or Delete Your Data</h3>
             <p>
-              You can update your profile information or request deletion of your
-              account and associated data. Note that we may retain some
+              You can update your profile information or request deletion of
+              your account and associated data. Note that we may retain some
               information for legal or business purposes.
             </p>
 
@@ -259,8 +260,8 @@ export default function PrivacyPage() {
             </p>
             <p>
               If we learn that a child under 13 has provided us with personal
-              information, we will promptly delete such information and terminate
-              the child&apos;s account.
+              information, we will promptly delete such information and
+              terminate the child&apos;s account.
             </p>
             <p>
               Parents or guardians who believe their child has provided
@@ -281,17 +282,26 @@ export default function PrivacyPage() {
                 </a>
               </li>
               <li>
-                <a href="https://support.google.com/chrome/answer/95647" target="_blank">
+                <a
+                  href="https://support.google.com/chrome/answer/95647"
+                  target="_blank"
+                >
                   Chrome
                 </a>
               </li>
               <li>
-                <a href="https://support.mozilla.org/kb/cookies" target="_blank">
+                <a
+                  href="https://support.mozilla.org/kb/cookies"
+                  target="_blank"
+                >
                   Firefox
                 </a>
               </li>
               <li>
-                <a href="https://support.microsoft.com/en-us/microsoft-edge" target="_blank">
+                <a
+                  href="https://support.microsoft.com/en-us/microsoft-edge"
+                  target="_blank"
+                >
                   Edge
                 </a>
               </li>
@@ -300,10 +310,10 @@ export default function PrivacyPage() {
             <h2>International Data Transfers</h2>
             <p>
               Our Service operates globally, and your information may be
-              transferred to countries other than where you reside. We
-              implement appropriate safeguards, including standard contractual
-              clauses and other legal mechanisms, to protect your data during
-              international transfers.
+              transferred to countries other than where you reside. We implement
+              appropriate safeguards, including standard contractual clauses and
+              other legal mechanisms, to protect your data during international
+              transfers.
             </p>
 
             <h2>Third-Party Links</h2>

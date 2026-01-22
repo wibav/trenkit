@@ -6,9 +6,9 @@ import Card from "@/components/Card";
 import styles from "./page.module.scss";
 
 export const metadata: Metadata = {
-  title: "Apps Development | Trenkit",
+  title: "Mobile App Development for iOS & Android | Trenkit",
   description:
-    "We develop professional mobile applications for iOS, Android, Web and cross-platform. Custom and high-quality solutions.",
+    "Professional mobile application development for iOS, Android, and Web. React Native, React, Next.js, and Vue.js solutions. From MVP to enterprise-scale apps.",
 };
 
 export default function AppsPage() {
@@ -16,7 +16,7 @@ export default function AppsPage() {
     {
       title: "React Native",
       description:
-        "Cross-platform mobile development with React Native. Build high-performance applications for iOS and Android from a single codebase.",
+        "Cross-platform mobile development with React Native. Build high-performance applications for iOS and Android from a single codebase.\n\nPerfect for: Startups seeking rapid time-to-market and cost-effective native-like apps.",
       features: [
         "iOS & Android",
         "Shared Codebase",
@@ -27,7 +27,7 @@ export default function AppsPage() {
     {
       title: "React Web Apps",
       description:
-        "Modern web applications built with React and Next.js. Fast, scalable, and SEO-friendly solutions for all platforms.",
+        "Modern web applications built with React and Next.js. Fast, scalable, and SEO-friendly solutions for all platforms.\n\nPerfect for: Enterprises needing server-rendered, SEO-optimized web applications.",
       features: [
         "React & Next.js",
         "Responsive Design",
@@ -38,7 +38,7 @@ export default function AppsPage() {
     {
       title: "Vue.js Applications",
       description:
-        "Progressive web applications with Vue.js. Lightweight, flexible, and highly performant web solutions.",
+        "Progressive web applications with Vue.js. Lightweight, flexible, and highly performant web solutions.\n\nPerfect for: Projects requiring rapid development with a gentle learning curve.",
       features: [
         "Vue 3",
         "Nuxt Framework",
@@ -49,7 +49,7 @@ export default function AppsPage() {
     {
       title: "Web Technologies",
       description:
-        "Full-stack web development using modern JavaScript frameworks. Custom solutions tailored to your specific business needs.",
+        "Full-stack web development using modern JavaScript frameworks. Custom solutions tailored to your specific business needs.\n\nPerfect for: Complex applications requiring custom integrations and specialized tech stacks.",
       features: [
         "Full-Stack Development",
         "API Integration",

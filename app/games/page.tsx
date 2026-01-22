@@ -6,9 +6,9 @@ import Card from "@/components/Card";
 import styles from "./page.module.scss";
 
 export const metadata: Metadata = {
-  title: "Video Game Development | Trenkit",
+  title: "Mobile Video Game Development | Unity Games | Trenkit",
   description:
-    "We create addictive and immersive video games with Unity and C#. Casual games, prototypes, and complete game solutions.",
+    "Professional mobile game development with Unity and C#. Casual games, indie games, and complete game solutions with monetization strategies. From concept to launch.",
 };
 
 export default function GamesPage() {

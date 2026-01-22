@@ -38,12 +38,12 @@ export default function Home() {
                 className={styles.heroButtons}
                 style={{ animationDelay: "0.4s" }}
               >
-                <Link href="/apps">
-                  <Button size="lg">Explore Apps</Button>
+                <Link href="#contact">
+                  <Button size="lg">Let's Talk About Your Idea</Button>
                 </Link>
-                <Link href="/games">
+                <Link href="/apps">
                   <Button variant="secondary" size="lg">
-                    Explore Games
+                    View Our Portfolio
                   </Button>
                 </Link>
               </div>
@@ -72,17 +72,17 @@ export default function Home() {
           <div className={styles.grid}>
             <Card
               title="React Native"
-              description="Cross-platform mobile applications for iOS and Android. Build once, deploy everywhere with optimized performance and native experience."
+              description="Cross-platform mobile applications for iOS and Android optimized for performance and scalability. Build once, deploy everywhere with native experience.\n\n• iOS & Android optimized for speed\n• Performance monitoring & analytics"
               icon="📱"
             />
             <Card
               title="Web Applications"
-              description="Modern web applications built with React, Next.js, and Vue.js. Progressive, responsive, and scalable solutions for all devices."
+              description="Modern web applications built with React, Next.js, and Vue.js. Progressive, responsive, and SEO-friendly solutions for all devices.\n\n• SEO optimized & fast loading\n• Responsive & accessible design"
               icon="🌐"
             />
             <Card
               title="Custom Solutions"
-              description="Tailored development solutions based on your specific needs. From MVP to enterprise-level applications with cutting-edge tech stacks."
+              description="Tailored development solutions based on your specific needs. From MVP to enterprise-level applications with cutting-edge tech stacks.\n\n• Scalable architecture\n• Long-term support included"
               icon="⚙️"
             />
           </div>
@@ -101,17 +101,17 @@ export default function Home() {
           <div className={styles.grid}>
             <Card
               title="Unity Games"
-              description="Professional game development using Unity and C#. Create engaging gaming experiences with advanced graphics and physics."
+              description="Professional game development using Unity and C#. Create engaging, immersive gaming experiences with advanced graphics and physics.\n\n• Mobile games focused on engagement\n• Monetization optimization strategies"
               icon="🎮"
             />
             <Card
               title="Game Design"
-              description="Full game design and development pipeline. From concept art to release, we handle all aspects of game creation."
+              description="Full game design and development pipeline. From concept to launch, we handle design, development, art, and publishing.\n\n• Complete game creation cycle\n• Multi-platform deployment"
               icon="🎨"
             />
             <Card
               title="Prototypes & MVPs"
-              description="Validate your game concept with a functional prototype. Test mechanics, gameplay loops, and user engagement before full production."
+              description="Validate your game concept with a functional prototype. Test mechanics, gameplay loops, and user engagement before full production investment.\n\n• Rapid prototyping\n• User feedback integration"
               icon="🚀"
             />
           </div>

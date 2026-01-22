@@ -47,7 +47,10 @@ export default function Footer() {
         <div className={styles.divider}></div>
 
         <div className={styles.bottom}>
-          <p>&copy; {currentYear} Trenkit. All rights reserved. | Mobile Apps & Games Development</p>
+          <p>
+            &copy; {currentYear} Trenkit. All rights reserved. | Mobile Apps &
+            Games Development
+          </p>
         </div>
       </div>
     </footer>

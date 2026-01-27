@@ -1,10 +1,10 @@
 @import "@/styles/variables.scss";
 
 .footer {
-  @include gradient-primary;
+  background: #0b0f18;
   color: $color-white;
   padding: $spacing-2xl 0 $spacing-xl;
-  margin-top: $spacing-2xl;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 
   .content {
     display: grid;
@@ -24,8 +24,9 @@
       }
 
       p {
-        color: rgba($color-white, 0.9);
+        color: rgba($color-white, 0.7);
         margin-bottom: 0;
+        line-height: 1.7;
       }
 
       ul {
@@ -35,11 +36,12 @@
           margin-bottom: $spacing-sm;
 
           a {
-            color: rgba($color-white, 0.9);
+            color: rgba($color-white, 0.7);
             transition: $transition-smooth;
+            text-decoration: none;
 
             &:hover {
-              color: $color-orange-accent;
+              color: #00e0ff;
             }
           }
         }
@@ -49,7 +51,7 @@
 
   .divider {
     height: 1px;
-    background-color: rgba($color-white, 0.2);
+    background-color: rgba(255, 255, 255, 0.08);
     margin-bottom: $spacing-lg;
   }
 
@@ -57,7 +59,7 @@
     text-align: center;
 
     p {
-      color: rgba($color-white, 0.8);
+      color: rgba($color-white, 0.6);
       margin: 0;
       font-size: 0.9rem;
     }

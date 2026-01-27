@@ -5,7 +5,7 @@ import styles from "./ContactForm.module.scss";
 import Button from "./Button";
 
 interface ContactFormProps {
-  variant?: "default" | "minimal";
+  variant?: "default" | "minimal" | "dark";
 }
 
 /**
@@ -94,8 +94,8 @@ export default function ContactForm({ variant = "default" }: ContactFormProps) {
         />
       </div>
 
-      <Button type="submit" size="lg">
-        Enviar Mensaje
+      <Button type="submit" size="lg" className={styles.submitButton}>
+        Enviar mensaje
       </Button>
     </form>
   );

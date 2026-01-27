@@ -1,141 +1,329 @@
 @import "@/styles/variables.scss";
 
+.page {
+  background-color: #0b0f18;
+  color: $color-white;
+  min-height: 100vh;
+}
+
 .hero {
-  padding-top: 120px;
-  min-height: 50vh;
+  padding: 140px 0 $spacing-2xl;
   text-align: center;
-  @include flex-center;
-  flex-direction: column;
+  background: radial-gradient(
+      circle at 15% 10%,
+      rgba(0, 224, 255, 0.2),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 85% 0%,
+      rgba(122, 76, 255, 0.28),
+      transparent 50%
+    ),
+    linear-gradient(180deg, #0b0f18 0%, #0d1220 100%);
+
+  h1 {
+    font-size: clamp(2.2rem, 4.2vw, 3.3rem);
+    margin-bottom: $spacing-md;
+    line-height: 1.1;
+
+    span {
+      color: #00e0ff;
+    }
+  }
+
+  p {
+    max-width: 680px;
+    margin: 0 auto $spacing-lg;
+    color: rgba($color-white, 0.7);
+    line-height: 1.7;
+  }
+
+  @include responsive-mobile {
+    padding: 110px 0 $spacing-xl;
+  }
 }
 
-.gamesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: $spacing-xl;
+.eyebrow {
+  display: inline-block;
+  margin-bottom: $spacing-sm;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.featuresList {
-  list-style: none;
-  margin-top: $spacing-md;
+.heroActions {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-md;
+  flex-wrap: wrap;
 
-  li {
-    padding: $spacing-xs 0;
-    color: $color-gray-light;
-    font-size: 0.95rem;
+  @include responsive-mobile {
+    flex-direction: column;
+    align-items: center;
 
-    &::before {
-      content: "✓ ";
-      color: $color-orange-accent;
-      font-weight: $font-weight-bold;
-      margin-right: $spacing-xs;
+    a {
+      width: 100%;
+      max-width: 320px;
     }
   }
 }
 
-.engineGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: $spacing-lg;
+.primaryButton,
+.secondaryButton {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  border-radius: 999px;
+  font-weight: $font-weight-semibold;
+  transition: $transition-smooth;
 }
 
-.engineCard {
-  background-color: $color-white;
-  padding: $spacing-lg;
-  border-radius: 12px;
-  border: 1px solid rgba($color-blue-primary, 0.1);
-  transition: $transition-smooth;
+.primaryButton {
+  background: linear-gradient(90deg, #00e0ff, #3f5bff);
+  color: #0b0f18;
+  box-shadow: 0 12px 25px rgba(0, 97, 255, 0.35);
 
   &:hover {
-    transform: translateY(-4px);
-    border-color: $color-blue-primary;
+    transform: translateY(-2px);
   }
+}
 
-  h4 {
-    color: $color-blue-primary;
+.secondaryButton {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: $color-white;
+  background: rgba(255, 255, 255, 0.08);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.18);
+  }
+}
+
+.services {
+  padding: $spacing-2xl 0;
+  background: #0b0f18;
+}
+
+.sectionHeader {
+  max-width: 720px;
+  margin-bottom: $spacing-xl;
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 2.6rem);
     margin-bottom: $spacing-sm;
   }
 
   p {
-    font-size: 0.95rem;
-    margin-bottom: $spacing-md;
-  }
-
-  .techTags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $spacing-xs;
-
-    span {
-      display: inline-block;
-      background: rgba($color-blue-primary, 0.1);
-      color: $color-blue-primary;
-      padding: 4px 10px;
-      border-radius: 4px;
-      font-size: 0.8rem;
-      font-weight: $font-weight-semibold;
-    }
+    color: rgba($color-white, 0.7);
+    line-height: 1.7;
   }
 }
 
-.cyclGrid {
+.sectionEyebrow {
+  color: rgba(0, 224, 255, 0.7);
+  font-size: 0.75rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  margin-bottom: $spacing-sm;
+  display: inline-block;
+}
+
+.sectionEyebrowAlt {
+  color: rgba(255, 112, 247, 0.8);
+  font-size: 0.75rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  margin-bottom: $spacing-sm;
+  display: inline-block;
+}
+
+.cardGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: $spacing-lg;
+
+  @include responsive-mobile {
+    gap: $spacing-md;
+  }
+}
+
+.serviceCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: $spacing-lg;
+  transition: $transition-smooth;
+
+  h3 {
+    margin: $spacing-sm 0;
+  }
+
+  p {
+    color: rgba($color-white, 0.65);
+    line-height: 1.6;
+  }
+
+  ul {
+    margin: $spacing-md 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: $spacing-xs;
+
+    li {
+      color: rgba($color-white, 0.8);
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.45rem;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #00e0ff, #7a4cff);
+      }
+    }
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 224, 255, 0.3);
+  }
+
+  @include responsive-mobile {
+    padding: $spacing-md;
+  }
+}
+
+.serviceIcon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00e0ff, #7a4cff);
+  font-size: 1.5rem;
+}
+
+.stack {
+  padding: $spacing-2xl 0;
+  background: #0c111d;
+}
+
+.stackGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: $spacing-lg;
+
+  @include responsive-mobile {
+    gap: $spacing-md;
+  }
+}
+
+.stackCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: $spacing-lg;
+
+  h4 {
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    color: rgba($color-white, 0.65);
+    line-height: 1.6;
+  }
+}
+
+.tagList {
+  margin-top: $spacing-md;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-xs;
+
+  span {
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    background: rgba(0, 224, 255, 0.12);
+    color: #00e0ff;
+  }
+}
+
+.cycle {
+  padding: $spacing-2xl 0;
+  background: #0b0f18;
+}
+
+.cycleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $spacing-lg;
+
+  @include responsive-mobile {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: $spacing-md;
+  }
 }
 
 .cycleItem {
-  text-align: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
   padding: $spacing-lg;
-  background-color: $color-white;
-  border-radius: 12px;
-  border: 1px solid rgba($color-blue-primary, 0.1);
-
-  .cycleNumber {
-    width: 45px;
-    height: 45px;
-    @include flex-center;
-    @include gradient-primary;
-    color: $color-white;
-    border-radius: 50%;
-    font-weight: $font-weight-bold;
-    font-size: 1.25rem;
-    margin: 0 auto $spacing-md;
-  }
+  text-align: center;
 
   h4 {
-    color: $color-blue-dark;
-    margin-bottom: $spacing-sm;
+    margin-top: $spacing-sm;
   }
+}
 
-  p {
-    font-size: 0.95rem;
-    margin: 0;
-  }
+.cycleNumber {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: $font-weight-bold;
+  background: linear-gradient(135deg, #00e0ff, #7a4cff);
+  color: #0b0f18;
+}
+
+.monetization {
+  padding: $spacing-2xl 0;
+  background: #0c111d;
 }
 
 .monetizationGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: $spacing-lg;
+
+  @include responsive-mobile {
+    gap: $spacing-md;
+  }
 }
 
 .monetizationCard {
-  background: linear-gradient(
-    135deg,
-    rgba($color-blue-primary, 0.05) 0%,
-    rgba($color-purple-primary, 0.05) 100%
-  );
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
   padding: $spacing-lg;
-  border-radius: 12px;
-  border: 1px solid rgba($color-blue-primary, 0.2);
 
   h4 {
-    color: $color-blue-primary;
     margin-bottom: $spacing-sm;
   }
 
   p {
-    font-size: 0.95rem;
-    margin: 0;
+    color: rgba($color-white, 0.65);
+    line-height: 1.6;
   }
 }
+

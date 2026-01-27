@@ -1,30 +1,31 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Section from "@/components/Section";
 import styles from "./page.module.scss";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Trenkit",
+  title: "Política de Privacidad",
   description:
-    "Privacy policy and data protection information for Trenkit apps, games, and development services.",
+    "Información de privacidad y protección de datos para servicios de Trenkit Studio.",
 };
 
 export default function PrivacyPage() {
   return (
     <>
       <Navbar />
-      <main className={styles.main}>
-        <Section variant="gradient" className={styles.header}>
-          <h1 style={{ color: "white" }}>Privacy Policy</h1>
-          <p style={{ color: "rgba(255,255,255,0.9)" }}>
-            Effective Date: January 22, 2026
-          </p>
-        </Section>
+      <main className={styles.page}>
+        <section className={styles.header}>
+          <div className="container">
+            <span className={styles.eyebrow}>Legal</span>
+            <h1>Política de Privacidad</h1>
+            <p>Vigencia: 22 de enero de 2026</p>
+          </div>
+        </section>
 
-        <Section variant="light" className={styles.content}>
-          <div className={styles.policyContent}>
-            <h2>Welcome to Trenkit&apos;s Privacy Policy</h2>
+        <section className={styles.content}>
+          <div className="container">
+            <div className={styles.card}>
+              <h2>Welcome to Trenkit&apos;s Privacy Policy</h2>
             <p>
               Thank you for using Trenkit (&quot;Company&quot;, &quot;We&quot;,
               &quot;Us&quot;, or &quot;Our&quot;). We are committed to
@@ -331,10 +332,11 @@ export default function PrivacyPage() {
               acceptance of the updated policy.
             </p>
 
-            <h2>Last Updated</h2>
-            <p>This Privacy Policy was last updated on January 22, 2026.</p>
+              <h2>Last Updated</h2>
+              <p>This Privacy Policy was last updated on January 22, 2026.</p>
+            </div>
           </div>
-        </Section>
+        </section>
       </main>
       <Footer />
     </>

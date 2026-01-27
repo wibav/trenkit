@@ -5,11 +5,11 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
-  background-color: rgba($color-white, 0.95);
-  backdrop-filter: blur(10px);
+  height: 72px;
+  background-color: rgba(11, 15, 24, 0.85);
+  backdrop-filter: blur(18px);
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
   .content {
     @include flex-center;
@@ -22,14 +22,25 @@
   .logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
     height: 100%;
     flex-shrink: 0;
+    color: $color-white;
+    font-weight: $font-weight-semibold;
+    text-decoration: none;
+  }
 
-    img {
-      width: auto;
-      display: block;
-    }
+  .logoMark {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #00e0ff, #7a4cff);
+    box-shadow: 0 6px 14px rgba(0, 224, 255, 0.4);
+  }
+
+  .logoText {
+    font-size: 1rem;
+    letter-spacing: 0.02em;
   }
 
   .nav {
@@ -45,8 +56,8 @@
       right: 0;
       flex-direction: column;
       gap: 0;
-      background-color: $color-white;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      background-color: rgba(11, 15, 24, 0.95);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
       max-height: 0;
       overflow: hidden;
       transition: $transition-smooth;
@@ -58,7 +69,7 @@
   }
 
   .navLink {
-    color: $color-blue-dark;
+    color: rgba($color-white, 0.8);
     font-weight: $font-weight-semibold;
     font-size: 0.95rem;
     position: relative;
@@ -71,7 +82,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      @include gradient-primary;
+      background: linear-gradient(90deg, #00e0ff, #7a4cff);
       transition: $transition-smooth;
     }
 
@@ -83,15 +94,36 @@
       width: 100%;
       padding: $spacing-md;
       text-align: left;
-      border-bottom: 1px solid rgba($color-blue-primary, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
       &::after {
         display: none;
       }
 
       &:hover {
-        background-color: $color-gray-bg;
+        background-color: rgba(255, 255, 255, 0.05);
       }
+    }
+  }
+
+  .navCta {
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #00e0ff, #3f5bff);
+    color: #0b0f18;
+    font-weight: $font-weight-semibold;
+    text-decoration: none;
+    transition: $transition-smooth;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px rgba(0, 97, 255, 0.35);
+    }
+
+    @include responsive-tablet {
+      width: calc(100% - 2rem);
+      margin: $spacing-md;
+      text-align: center;
     }
   }
 
@@ -108,7 +140,7 @@
       span {
         width: 24px;
         height: 2px;
-        background-color: $color-blue-dark;
+        background-color: $color-white;
         border-radius: 1px;
         transition: $transition-smooth;
       }

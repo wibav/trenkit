@@ -1,114 +1,204 @@
 @import "@/styles/variables.scss";
 
-.hero {
-  padding-top: 120px;
-  min-height: 50vh;
-  text-align: center;
-  @include flex-center;
-  flex-direction: column;
+.page {
+  background-color: #0b0f18;
+  color: $color-white;
+  min-height: 100vh;
 }
 
-.servicesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: $spacing-xl;
+.hero {
+  padding: 140px 0 $spacing-2xl;
+  text-align: center;
+  background: radial-gradient(
+      circle at 20% 10%,
+      rgba(0, 224, 255, 0.16),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(122, 76, 255, 0.24),
+      transparent 50%
+    ),
+    linear-gradient(180deg, #0b0f18 0%, #0d1220 100%);
+
+  h1 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    margin-bottom: $spacing-md;
+    line-height: 1.1;
+
+    span {
+      color: #00e0ff;
+    }
+  }
+
+  p {
+    max-width: 640px;
+    margin: 0 auto $spacing-lg;
+    color: rgba($color-white, 0.7);
+    line-height: 1.7;
+  }
 
   @include responsive-mobile {
+    padding: 110px 0 $spacing-xl;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: $spacing-sm;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.heroActions {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-md;
+  flex-wrap: wrap;
+
+  @include responsive-mobile {
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+}
+
+.primaryButton,
+.secondaryButton,
+.ghostButton {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  border-radius: 999px;
+  font-weight: $font-weight-semibold;
+  transition: $transition-smooth;
+}
+
+.primaryButton {
+  background: linear-gradient(90deg, #00e0ff, #3f5bff);
+  color: #0b0f18;
+  box-shadow: 0 12px 25px rgba(0, 97, 255, 0.35);
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.secondaryButton {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: $color-white;
+  background: rgba(255, 255, 255, 0.08);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.18);
+  }
+}
+
+.ghostButton {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+
+  &:hover {
+    color: $color-white;
+    border-color: rgba(255, 255, 255, 0.45);
+  }
+}
+
+.projects {
+  padding: $spacing-2xl 0;
+  background: #0b0f18;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: $spacing-lg;
+
+  @include responsive-tablet {
     grid-template-columns: 1fr;
   }
 }
 
-.featuresList {
-  list-style: none;
-  margin-top: $spacing-md;
-
-  li {
-    padding: $spacing-xs 0;
-    color: $color-gray-light;
-    font-size: 0.95rem;
-
-    &::before {
-      content: "✓ ";
-      color: $color-orange-accent;
-      font-weight: $font-weight-bold;
-      margin-right: $spacing-xs;
-    }
-  }
-}
-
-.processGrid {
+.projectCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 240px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: $spacing-xl;
-}
-
-.processStep {
-  text-align: center;
-  padding: $spacing-lg;
-  border-radius: 12px;
-  background-color: $color-white;
-  border: 1px solid rgba($color-blue-primary, 0.1);
+  grid-template-rows: 1fr auto;
   transition: $transition-smooth;
 
   &:hover {
-    border-color: $color-blue-primary;
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    border-color: rgba(0, 224, 255, 0.4);
   }
 
-  .stepNumber {
-    width: 50px;
-    height: 50px;
-    @include flex-center;
-    @include gradient-primary;
-    color: $color-white;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    font-weight: $font-weight-bold;
-    margin: 0 auto $spacing-md;
+  @include responsive-mobile {
+    min-height: auto;
   }
+}
+
+.projectVisual {
+  background: linear-gradient(120deg, #1b2a38, #0f1726 60%, #0b0f18);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at 30% 30%,
+      rgba(0, 224, 255, 0.25),
+      transparent 60%
+    );
+  }
+}
+
+.projectBody {
+  padding: $spacing-md $spacing-lg $spacing-lg;
 
   h3 {
-    color: $color-blue-dark;
-    margin-bottom: $spacing-sm;
+    margin: $spacing-sm 0;
+    font-size: 1.2rem;
   }
 
   p {
-    font-size: 0.95rem;
+    color: rgba($color-white, 0.65);
+    line-height: 1.6;
     margin: 0;
   }
-}
 
-.techGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: $spacing-lg;
-}
-
-.techCard {
-  background-color: $color-white;
-  padding: $spacing-lg;
-  border-radius: 12px;
-  border: 1px solid rgba($color-blue-primary, 0.1);
-
-  h4 {
-    color: $color-blue-primary;
-    margin-bottom: $spacing-md;
-    font-size: 1.125rem;
-  }
-
-  .techList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $spacing-sm;
-
-    span {
-      display: inline-block;
-      @include gradient-subtle;
-      color: $color-blue-primary;
-      padding: $spacing-xs $spacing-md;
-      border-radius: 6px;
-      font-size: 0.875rem;
-      font-weight: $font-weight-semibold;
-    }
+  @include responsive-mobile {
+    padding: $spacing-md;
   }
 }
+
+.projectTag {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0, 224, 255, 0.7);
+}
+
+.large {
+  grid-row: span 2;
+}
+
+.wide {
+  grid-column: span 2;
+
+  @include responsive-tablet {
+    grid-column: auto;
+  }
+}
+

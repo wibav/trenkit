@@ -1,64 +1,92 @@
 @import "@/styles/variables.scss";
 
-.main {
-  margin-top: 70px;
+.page {
+  background: #0b0f18;
+  color: $color-white;
   min-height: 100vh;
 }
 
 .header {
-  padding-top: 120px !important;
-  @include gradient-primary;
-  color: $color-white;
+  padding: 140px 0 $spacing-2xl;
+  background: radial-gradient(
+      circle at 20% 10%,
+      rgba(0, 224, 255, 0.2),
+      transparent 55%
+    ),
+    linear-gradient(180deg, #0b0f18 0%, #0d1220 100%);
   text-align: center;
 
   h1 {
-    color: $color-white;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: $spacing-sm;
   }
 
   p {
-    color: rgba($color-white, 0.9);
+    color: rgba($color-white, 0.7);
   }
 }
 
-.policyContent {
-  h2 {
-    color: $color-blue-dark;
-    margin-top: $spacing-xl;
-    margin-bottom: $spacing-md;
-    font-weight: $font-weight-bold;
-  }
+.eyebrow {
+  display: inline-block;
+  margin-bottom: $spacing-sm;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
 
-  h3 {
-    color: $color-blue-dark;
-    margin-top: $spacing-lg;
-    margin-bottom: $spacing-md;
-    font-weight: $font-weight-semibold;
-  }
+.content {
+  padding: $spacing-2xl 0;
+}
 
-  p {
-    color: $color-gray-light;
-    line-height: 1.8;
-    margin-bottom: $spacing-md;
-  }
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: $spacing-xl;
+}
 
-  ul {
-    color: $color-gray-light;
-    margin-bottom: $spacing-lg;
-    margin-left: $spacing-lg;
+.card h2 {
+  color: $color-white;
+  margin-top: $spacing-xl;
+  margin-bottom: $spacing-md;
+  font-weight: $font-weight-bold;
+}
 
-    li {
-      margin-bottom: $spacing-sm;
-      line-height: 1.6;
+.card h3 {
+  color: rgba($color-white, 0.9);
+  margin-top: $spacing-lg;
+  margin-bottom: $spacing-md;
+  font-weight: $font-weight-semibold;
+}
 
-      ul {
-        margin-top: $spacing-sm;
-        margin-bottom: 0;
-      }
+.card p {
+  color: rgba($color-white, 0.7);
+  line-height: 1.8;
+  margin-bottom: $spacing-md;
+}
+
+.card ul {
+  color: rgba($color-white, 0.75);
+  margin-bottom: $spacing-lg;
+  margin-left: $spacing-lg;
+
+  li {
+    margin-bottom: $spacing-sm;
+    line-height: 1.6;
+
+    ul {
+      margin-top: $spacing-sm;
+      margin-bottom: 0;
     }
   }
+}
 
-  strong {
-    color: $color-blue-dark;
-    font-weight: $font-weight-semibold;
-  }
+.card a {
+  color: #00e0ff;
+}
+
+.card strong {
+  color: $color-white;
+  font-weight: $font-weight-semibold;
 }

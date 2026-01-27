@@ -14,6 +14,37 @@
     gap: $spacing-md;
   }
 
+  &.dark {
+    max-width: 100%;
+
+    .success {
+      background-color: rgba(0, 224, 255, 0.12);
+      color: #00e0ff;
+    }
+
+    .group {
+      label {
+        color: rgba($color-white, 0.85);
+      }
+
+      input,
+      textarea {
+        background-color: rgba(255, 255, 255, 0.04);
+        border-color: rgba(255, 255, 255, 0.12);
+        color: $color-white;
+
+        &::placeholder {
+          color: rgba($color-white, 0.45);
+        }
+
+        &:focus {
+          border-color: #00e0ff;
+          box-shadow: 0 0 0 3px rgba(0, 224, 255, 0.15);
+        }
+      }
+    }
+  }
+
   .success {
     padding: $spacing-md;
     background-color: #d4edda;
@@ -61,4 +92,8 @@
       min-height: 120px;
     }
   }
+}
+
+.submitButton {
+  width: 100%;
 }

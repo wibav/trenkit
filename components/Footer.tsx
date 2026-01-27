@@ -12,21 +12,24 @@ export default function Footer() {
       <div className="container">
         <div className={styles.content}>
           <div className={styles.section}>
-            <h4>Trenkit</h4>
-            <p>We create mobile apps and games that empower your idea.</p>
+            <h4>Trenkit Studio</h4>
+            <p>
+              Creamos experiencias digitales con diseño impecable y tecnología
+              de punta.
+            </p>
           </div>
 
           <div className={styles.section}>
-            <h4>Links</h4>
+            <h4>Explorar</h4>
             <ul>
               <li>
-                <Link href="/">Home</Link>
+                <Link href="/#home">Inicio</Link>
               </li>
               <li>
-                <Link href="/apps">Apps</Link>
+                <Link href="/#technologies">Tecnologías</Link>
               </li>
               <li>
-                <Link href="/games">Games</Link>
+                <Link href="/apps">Proyectos</Link>
               </li>
             </ul>
           </div>
@@ -35,10 +38,10 @@ export default function Footer() {
             <h4>Legal</h4>
             <ul>
               <li>
-                <Link href="/privacy">Privacy</Link>
+                <Link href="/privacy">Privacidad</Link>
               </li>
               <li>
-                <Link href="/terms">Terms</Link>
+                <Link href="/terms">Términos</Link>
               </li>
             </ul>
           </div>
@@ -48,8 +51,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>
-            &copy; {currentYear} Trenkit. All rights reserved. | Mobile Apps &
-            Games Development
+            &copy; {currentYear} Trenkit Studio. Todos los derechos reservados.
           </p>
         </div>
       </div>

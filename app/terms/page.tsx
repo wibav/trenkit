@@ -1,29 +1,30 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Section from "@/components/Section";
 import styles from "./page.module.scss";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Trenkit",
+  title: "Términos de Servicio",
   description:
-    "Terms of service for using Trenkit mobile apps, games, and development services.",
+    "Términos y condiciones de uso para los servicios de Trenkit Studio.",
 };
 
 export default function TermsPage() {
   return (
     <>
       <Navbar />
-      <main className={styles.main}>
-        <Section variant="gradient" className={styles.header}>
-          <h1 style={{ color: "white" }}>Terms of Service</h1>
-          <p style={{ color: "rgba(255,255,255,0.9)" }}>
-            Effective Date: January 22, 2026
-          </p>
-        </Section>
+      <main className={styles.page}>
+        <section className={styles.header}>
+          <div className="container">
+            <span className={styles.eyebrow}>Legal</span>
+            <h1>Términos de Servicio</h1>
+            <p>Vigencia: 22 de enero de 2026</p>
+          </div>
+        </section>
 
-        <Section variant="light" className={styles.content}>
-          <div className={styles.termsContent}>
+        <section className={styles.content}>
+          <div className="container">
+            <div className={styles.card}>
             <h2>Agreement to Terms</h2>
             <p>
               These Terms of Service (&quot;Terms&quot;) govern the use of
@@ -309,10 +310,11 @@ export default function TermsPage() {
               <li>Support: trenkit.com/contact</li>
             </ul>
 
-            <h2>14. Effective Date</h2>
-            <p>These Terms of Service are effective as of January 22, 2026.</p>
+              <h2>14. Effective Date</h2>
+              <p>These Terms of Service are effective as of January 22, 2026.</p>
+            </div>
           </div>
-        </Section>
+        </section>
       </main>
       <Footer />
     </>

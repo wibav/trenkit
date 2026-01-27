@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Section from "@/components/Section";
-import Card from "@/components/Card";
+import ContactSection from "@/components/ContactSection";
+import Reveal from "@/components/Reveal";
 import styles from "./page.module.scss";
 
 export const metadata: Metadata = {
-  title: "Mobile Video Game Development | Unity Games | Trenkit",
+  title: "Videojuegos",
   description:
-    "Professional mobile game development with Unity and C#. Casual games, indie games, and complete game solutions with monetization strategies. From concept to launch.",
+    "Desarrollo profesional de videojuegos con Unity, prototipos rápidos y experiencias inmersivas.",
 };
 
 export default function GamesPage() {
@@ -66,189 +67,197 @@ export default function GamesPage() {
   return (
     <>
       <Navbar />
-      <main>
-        {/* Hero Section */}
-        <Section variant="gradient" className={styles.hero}>
-          <h1 style={{ color: "white", marginBottom: "1rem" }}>
-            Immersive Video Game Experiences
-          </h1>
-          <p
-            style={{
-              color: "rgba(255,255,255,0.95)",
-              fontSize: "1.25rem",
-              maxWidth: "600px",
-              margin: "0 auto",
-            }}
-          >
-            We create addictive and engaging video games that make an impact.
-            From concept to launch on global App Stores with proven monetization
-            strategies.
-          </p>
-        </Section>
-
-        {/* Game Types */}
-        <Section
-          title="Our Game Development Services"
-          subtitle="Specialties in mobile video game development"
-          variant="light"
-        >
-          <div className={styles.gamesGrid}>
-            {gameTypes.map((game, index) => (
-              <Card
-                key={index}
-                title={game.title}
-                description={game.description}
-                icon={game.icon}
-              >
-                <ul className={styles.featuresList}>
-                  {game.features.map((feature, i) => (
-                    <li key={i}>{feature}</li>
-                  ))}
-                </ul>
-              </Card>
-            ))}
-          </div>
-        </Section>
-
-        {/* Game Engines */}
-        <Section
-          title="Engines and Technologies"
-          subtitle="Professional video game development stack"
-        >
-          <div className={styles.engineGrid}>
-            <div className={styles.engineCard}>
-              <h4>Unity with C#</h4>
+      <main className={styles.page}>
+        <section className={styles.hero}>
+          <div className="container">
+            <Reveal>
+              <span className={styles.eyebrow}>Trenkit Studio</span>
+              <h1>
+                Videojuegos inmersivos con <span>Unity & Real-Time</span>
+              </h1>
               <p>
-                The most popular engine for mobile games. Advanced physics,
-                complete development tools, and powerful C# scripting.
+                Construimos experiencias memorables con mecánicas sólidas,
+                dirección artística y performance optimizada.
               </p>
-              <div className={styles.techTags}>
-                <span>C#</span>
-                <span>3D/2D</span>
-                <span>Physics Engine</span>
-                <span>Networking</span>
+              <div className={styles.heroActions}>
+                <Link className={styles.primaryButton} href="#contact">
+                  Reservar Proyecto
+                </Link>
+                <Link className={styles.secondaryButton} href="#services">
+                  Ver Servicios
+                </Link>
               </div>
-            </div>
-            <div className={styles.engineCard}>
-              <h4>Game Design</h4>
-              <p>
-                Complete game design pipeline from concept art to release.
-                Mechanics design, level design, and user experience
-                optimization.
-              </p>
-              <div className={styles.techTags}>
-                <span>Level Design</span>
-                <span>UI/UX</span>
-                <span>Game Balance</span>
-                <span>Narrative</span>
-              </div>
-            </div>
-            <div className={styles.engineCard}>
-              <h4>Performance & Optimization</h4>
-              <p>
-                Optimized for mobile devices. Graphics optimization, memory
-                management, and smooth 60+ FPS gameplay.
-              </p>
-              <div className={styles.techTags}>
-                <span>GDScript</span>
-                <span>2D/3D</span>
-                <span>Lightweight</span>
-                <span>Open Source</span>
-              </div>
-            </div>
-            <div className={styles.engineCard}>
-              <h4>Custom Solutions</h4>
-              <p>
-                Custom development with tailored technologies according to
-                specific game requirements.
-              </p>
-              <div className={styles.techTags}>
-                <span>WebGL</span>
-                <span>React Three Fiber</span>
-                <span>Babylon.js</span>
-                <span>Custom Engine</span>
-              </div>
-            </div>
+            </Reveal>
           </div>
-        </Section>
+        </section>
 
-        {/* Game Development Cycle */}
-        <Section title="Game Development Cycle" variant="light">
-          <div className={styles.cyclGrid}>
-            <div className={styles.cycleItem}>
-              <div className={styles.cycleNumber}>1</div>
-              <h4>Concept</h4>
-              <p>
-                Brainstorming, market analysis, and game concept definition.
-              </p>
-            </div>
-            <div className={styles.cycleItem}>
-              <div className={styles.cycleNumber}>2</div>
-              <h4>Game Design</h4>
-              <p>
-                Design document, mechanics, progression, and gameplay
-                objectives.
-              </p>
-            </div>
-            <div className={styles.cycleItem}>
-              <div className={styles.cycleNumber}>3</div>
-              <h4>Prototype</h4>
-              <p>
-                Playable prototype to validate mechanics and user experience.
-              </p>
-            </div>
-            <div className={styles.cycleItem}>
-              <div className={styles.cycleNumber}>4</div>
-              <h4>Production</h4>
-              <p>Full development of art, audio, code, and game systems.</p>
-            </div>
-            <div className={styles.cycleItem}>
-              <div className={styles.cycleNumber}>5</div>
-              <h4>Testing</h4>
-              <p>QA, bug fixes, performance optimization, and playtesting.</p>
-            </div>
-            <div className={styles.cycleItem}>
-              <div className={styles.cycleNumber}>6</div>
-              <h4>Launch</h4>
-              <p>
-                Publishing to app stores, marketing, and monetization strategy.
-              </p>
-            </div>
+        <section className={styles.services} id="services">
+          <div className="container">
+            <Reveal>
+              <div className={styles.sectionHeader}>
+                <span className={styles.sectionEyebrow}>GAME STACK</span>
+                <h2>Especialidades en desarrollo</h2>
+                <p>
+                  Desde prototipos hasta títulos listos para lanzar, con enfoque
+                  en retención y monetización.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={120}>
+              <div className={styles.cardGrid}>
+                {gameTypes.map((game) => (
+                  <article key={game.title} className={styles.serviceCard}>
+                    <div className={styles.serviceIcon}>{game.icon}</div>
+                    <h3>{game.title}</h3>
+                    <p>{game.description}</p>
+                    <ul>
+                      {game.features.map((feature) => (
+                        <li key={feature}>{feature}</li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+            </Reveal>
           </div>
-        </Section>
+        </section>
 
-        {/* Monetization */}
-        <Section title="Monetization Strategies">
-          <div className={styles.monetizationGrid}>
-            <div className={styles.monetizationCard}>
-              <h4>Integrated Advertising</h4>
-              <p>
-                Banners, interstitials, and rewarded ads that generate revenue
-                without affecting experience.
-              </p>
-            </div>
-            <div className={styles.monetizationCard}>
-              <h4>In-App Purchases</h4>
-              <p>
-                Skins, power-ups, coins, and premium content within the game.
-              </p>
-            </div>
-            <div className={styles.monetizationCard}>
-              <h4>Subscriptions</h4>
-              <p>
-                Battle passes, memberships, and access to exclusive content with
-                periodic renewal.
-              </p>
-            </div>
-            <div className={styles.monetizationCard}>
-              <h4>Hybrid Model</h4>
-              <p>
-                Combination of multiple strategies to maximize revenue based on
-                user profile.
-              </p>
-            </div>
+        <section className={styles.stack}>
+          <div className="container">
+            <Reveal>
+              <div className={styles.stackGrid}>
+                <article className={styles.stackCard}>
+                  <h4>Unity + C#</h4>
+                  <p>
+                    Pipeline completo con tooling profesional, shaders y
+                    optimización avanzada.
+                  </p>
+                  <div className={styles.tagList}>
+                    <span>C#</span>
+                    <span>3D/2D</span>
+                    <span>Physics</span>
+                    <span>Multiplayer</span>
+                  </div>
+                </article>
+                <article className={styles.stackCard}>
+                  <h4>Game Design</h4>
+                  <p>
+                    Diseño de niveles, balance de juego y loops de retención
+                    para maximizar engagement.
+                  </p>
+                  <div className={styles.tagList}>
+                    <span>Level Design</span>
+                    <span>UX</span>
+                    <span>Balance</span>
+                    <span>Narrativa</span>
+                  </div>
+                </article>
+                <article className={styles.stackCard}>
+                  <h4>Performance</h4>
+                  <p>
+                    60+ FPS sostenidos, profiling, y ajustes finos para cada
+                    dispositivo.
+                  </p>
+                  <div className={styles.tagList}>
+                    <span>Optimization</span>
+                    <span>GPU</span>
+                    <span>Memory</span>
+                    <span>QA</span>
+                  </div>
+                </article>
+                <article className={styles.stackCard}>
+                  <h4>Custom Tech</h4>
+                  <p>
+                    Soluciones personalizadas para experiencias híbridas en
+                    WebGL o XR.
+                  </p>
+                  <div className={styles.tagList}>
+                    <span>WebGL</span>
+                    <span>XR</span>
+                    <span>R3F</span>
+                    <span>Custom</span>
+                  </div>
+                </article>
+              </div>
+            </Reveal>
           </div>
-        </Section>
+        </section>
+
+        <section className={styles.cycle}>
+          <div className="container">
+            <Reveal>
+              <div className={styles.sectionHeader}>
+                <span className={styles.sectionEyebrowAlt}>PROCESO</span>
+                <h2>Del concepto al lanzamiento</h2>
+                <p>
+                  Metodología clara con entregas continuas y feedback en cada
+                  etapa.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={120}>
+              <div className={styles.cycleGrid}>
+                {[
+                  "Concepto",
+                  "Diseño",
+                  "Prototipo",
+                  "Producción",
+                  "Testing",
+                  "Lanzamiento",
+                ].map((step, index) => (
+                  <div key={step} className={styles.cycleItem}>
+                    <div className={styles.cycleNumber}>{index + 1}</div>
+                    <h4>{step}</h4>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        <section className={styles.monetization}>
+          <div className="container">
+            <Reveal>
+              <div className={styles.sectionHeader}>
+                <span className={styles.sectionEyebrow}>MONETIZACIÓN</span>
+                <h2>Estrategias rentables</h2>
+                <p>
+                  Diseñamos modelos híbridos alineados con la experiencia del
+                  jugador.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={120}>
+              <div className={styles.monetizationGrid}>
+                {[
+                  {
+                    title: "Publicidad integrada",
+                    text: "Banners, interstitials y rewarded ads sin fricción.",
+                  },
+                  {
+                    title: "Compras in-app",
+                    text: "Skins, power-ups y contenido premium dentro del juego.",
+                  },
+                  {
+                    title: "Suscripciones",
+                    text: "Battle pass y contenido exclusivo con renovación.",
+                  },
+                  {
+                    title: "Modelo híbrido",
+                    text: "Combinamos estrategias para maximizar conversión.",
+                  },
+                ].map((item) => (
+                  <article key={item.title} className={styles.monetizationCard}>
+                    <h4>{item.title}</h4>
+                    <p>{item.text}</p>
+                  </article>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        <ContactSection />
       </main>
       <Footer />
     </>

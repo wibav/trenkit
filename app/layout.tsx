@@ -62,9 +62,11 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Trenkit Studio | Experiencias Digitales",
-    description:
-      "Apps, juegos y plataformas web con diseño de alto impacto.",
+    description: "Apps, juegos y plataformas web con diseño de alto impacto.",
     images: ["/og-image.png"],
+  },
+  verification: {
+    google: "pub-3229768467294527",
   },
 };
 
@@ -79,6 +81,12 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#0B0F18" />
+        <meta name="google-adsense-account" content="ca-pub-3229768467294527" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3229768467294527"
+          crossOrigin="anonymous"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

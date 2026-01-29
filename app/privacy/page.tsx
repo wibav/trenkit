@@ -88,6 +88,45 @@ export default function PrivacyPage() {
               </li>
             </ul>
 
+            <h3>
+              Information Accessed for App Functionality (Local Device Access)
+            </h3>
+            <p>
+              <strong>Important:</strong> The following data is accessed{" "}
+              <strong>only on your device</strong> and is{" "}
+              <strong>not transmitted to our servers</strong> or collected by
+              us.
+            </p>
+            <ul>
+              <li>
+                <strong>Device Contacts</strong>: To provide the quick-access
+                phonebook feature, the app requests permission to read your
+                device's contact list (<code>READ_CONTACTS</code>). This allows
+                the app to display contact names and phone numbers within the
+                app's internal phonebook. This data is processed locally and
+                never leaves your device.
+              </li>
+              <li>
+                <strong>Phone Calling Functionality</strong>: The app requests
+                permission to make phone calls (<code>CALL_PHONE</code>)
+                strictly to initiate a call when you tap the call button on a
+                contact. The app does not make calls automatically.
+              </li>
+              <li>
+                <strong>SMS Functionality</strong>: The app requests permission
+                to send SMS messages (<code>SEND_SMS</code>) strictly to open
+                your default SMS application with the selected contact's number
+                pre-filled. The app does not send messages automatically or
+                access your SMS history.
+              </li>
+            </ul>
+            <p>
+              All contact data accessed is used{" "}
+              <strong>exclusively within the app on your device</strong> to
+              enable the quick-dial, quick-message, and WhatsApp launch
+              features. We do not collect, store, or transmit this contact data.
+            </p>
+
             <h3>Information We Collect Automatically</h3>
             <ul>
               <li>
@@ -126,6 +165,27 @@ export default function PrivacyPage() {
               <li>Process payments and verify transactions</li>
               <li>Send service-related communications</li>
               <li>Provide customer support</li>
+            </ul>
+
+            <h3>To Provide Core App Functionality</h3>
+            <ul>
+              <li>
+                To enable the quick-access phonebook feature by displaying your
+                device's contacts locally within the app
+              </li>
+              <li>
+                To facilitate communication by initiating phone calls via the
+                system dialer upon your explicit request
+              </li>
+              <li>
+                To facilitate messaging by opening your preferred SMS
+                application or WhatsApp with the selected contact pre-filled
+              </li>
+              <li>
+                <strong>Important</strong>: All these functions are processed
+                locally on your device. We do not collect, store, or transmit
+                your contact data or communication history to our servers.
+              </li>
             </ul>
 
             <h3>To Improve Your Experience</h3>
@@ -243,6 +303,14 @@ export default function PrivacyPage() {
               data.
             </p>
 
+            <p>
+              <strong>Local Device Data:</strong> For data that never leaves
+              your device (such as your contact information used in the
+              quick-access phonebook), security is managed by your device's
+              operating system and your personal security settings. We do not
+              transmit or store this data on our servers.
+            </p>
+
             <h2>Data Retention</h2>
             <p>
               We retain your personal information only for as long as necessary
@@ -250,6 +318,14 @@ export default function PrivacyPage() {
               otherwise permitted by law. When you delete your account, we will
               remove your information unless we are required by law to retain
               it.
+            </p>
+
+            <p>
+              <strong>Device Contact Data:</strong> We do not retain your
+              contact data on our servers. This data resides solely on your
+              personal device and is subject to your device's storage
+              management. Deleting the app will remove any cached contact data
+              stored locally by the app.
             </p>
 
             <h2>Children&apos;s Privacy</h2>

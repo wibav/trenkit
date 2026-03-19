@@ -9,6 +9,16 @@ export const metadata: Metadata = {
   title: "Mobile Video Game Development | Unity Games | Trenkit",
   description:
     "Professional mobile game development with Unity and C#. Casual games, indie games, and complete game solutions with monetization strategies. From concept to launch.",
+  openGraph: {
+    title: "Mobile Video Game Development | Unity Games | Trenkit",
+    description:
+      "Professional mobile game development with Unity and C#. Casual games, indie games, and complete game solutions.",
+    images: [{ url: "/og-games.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-games.png"],
+  },
 };
 
 export default function GamesPage() {

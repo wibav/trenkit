@@ -8,7 +8,17 @@ import styles from "./page.module.scss";
 export const metadata: Metadata = {
   title: "Mobile App Development for iOS & Android | Trenkit",
   description:
-    "Professional mobile application development for iOS, Android, and Web. React Native, React, Next.js, and Vue.js solutions. From MVP to enterprise-scale apps.",
+    "Professional mobile application development for iOS, Android, and Web. React Native, Next.js, and Vue.js solutions. From MVP to enterprise-scale apps.",
+  openGraph: {
+    title: "Mobile App Development for iOS & Android | Trenkit",
+    description:
+      "Professional mobile application development for iOS, Android, and Web. React Native, Next.js, and Vue.js solutions.",
+    images: [{ url: "/og-apps.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-apps.png"],
+  },
 };
 
 export default function AppsPage() {

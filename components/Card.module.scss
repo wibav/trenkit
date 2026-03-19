@@ -1,39 +1,84 @@
 @import "@/styles/variables.scss";
 
 .card {
-  background-color: $color-white;
-  border-radius: 12px;
+  background-color: $color-bg-card;
+  border-radius: 8px;
   padding: $spacing-xl;
-  @include shadow-light;
   transition: $transition-smooth;
-  border: 1px solid rgba($color-blue-primary, 0.1);
+  border: 1px solid rgba($color-cyan, 0.15);
+  position: relative;
+  overflow: hidden;
+
+  // Corner accent
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, $color-cyan, transparent);
+    transition: $transition-smooth;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(180deg, $color-cyan, transparent);
+    transition: $transition-smooth;
+  }
 
   &:hover {
-    transform: translateY(-8px);
-    @include shadow-hover;
+    transform: translateY(-6px);
+    border-color: rgba($color-cyan, 0.45);
+    background-color: $color-bg-hover;
+    box-shadow:
+      0 0 20px rgba($color-cyan, 0.08),
+      0 20px 40px rgba(0, 0, 0, 0.4);
+
+    &::before {
+      width: 70px;
+      box-shadow: 0 0 8px $color-cyan;
+    }
+    &::after {
+      height: 70px;
+      box-shadow: 0 0 8px $color-cyan;
+    }
   }
 
   .icon {
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     @include flex-center;
-    @include gradient-subtle;
-    border-radius: 12px;
+    background: rgba($color-cyan, 0.08);
+    border: 1px solid rgba($color-cyan, 0.2);
+    border-radius: 8px;
     margin-bottom: $spacing-md;
-    color: $color-blue-primary;
-    font-size: 2rem;
+    font-size: 1.75rem;
+    transition: $transition-smooth;
+
+    .card:hover & {
+      background: rgba($color-cyan, 0.14);
+      box-shadow: 0 0 12px rgba($color-cyan, 0.3);
+    }
   }
 
   .title {
-    font-size: $font-size-h3;
+    font-size: 1.25rem;
     margin-bottom: $spacing-sm;
-    color: $color-blue-dark;
+    color: $color-white;
+    letter-spacing: 0.02em;
   }
 
   .description {
     font-size: $font-size-body;
-    color: $color-gray-light;
+    color: $color-text-muted;
     margin-bottom: 0;
-    line-height: 1.6;
+    line-height: 1.7;
+    white-space: pre-line;
   }
 }

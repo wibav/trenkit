@@ -1,10 +1,29 @@
 @import "@/styles/variables.scss";
 
 .footer {
-  @include gradient-primary;
-  color: $color-white;
+  background-color: $color-bg-2;
+  border-top: 1px solid rgba($color-cyan, 0.15);
+  color: $color-text;
   padding: $spacing-2xl 0 $spacing-xl;
-  margin-top: $spacing-2xl;
+  position: relative;
+
+  // Top neon line
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      $color-cyan 30%,
+      $color-purple 70%,
+      transparent
+    );
+    opacity: 0.5;
+  }
 
   .content {
     display: grid;
@@ -18,28 +37,34 @@
 
     .section {
       h4 {
-        font-size: 1.125rem;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: $color-cyan;
         margin-bottom: $spacing-md;
-        color: $color-white;
+        font-family: $font-family-mono;
       }
 
       p {
-        color: rgba($color-white, 0.9);
+        color: $color-text-muted;
         margin-bottom: 0;
+        font-size: 0.9rem;
       }
 
       ul {
         list-style: none;
 
         li {
-          margin-bottom: $spacing-sm;
+          margin-bottom: $spacing-xs;
 
           a {
-            color: rgba($color-white, 0.9);
+            color: $color-text-muted;
+            font-size: 0.9rem;
             transition: $transition-smooth;
 
             &:hover {
-              color: $color-orange-accent;
+              color: $color-cyan;
+              text-shadow: 0 0 8px rgba($color-cyan, 0.5);
             }
           }
         }
@@ -49,7 +74,7 @@
 
   .divider {
     height: 1px;
-    background-color: rgba($color-white, 0.2);
+    background: rgba($color-cyan, 0.1);
     margin-bottom: $spacing-lg;
   }
 
@@ -57,9 +82,10 @@
     text-align: center;
 
     p {
-      color: rgba($color-white, 0.8);
+      color: rgba($color-text, 0.4);
       margin: 0;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+      font-family: $font-family-mono;
     }
   }
 }

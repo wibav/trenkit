@@ -1,7 +1,11 @@
 @import "./variables.scss";
 
-/* Reset y estilos globales */
-* {
+/* =========================================
+   Reset & Base
+   ========================================= */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,12 +18,13 @@ html {
 
 body {
   font-family: $font-family-primary;
-  background-color: $color-white;
-  color: $color-blue-dark;
+  background-color: $color-bg;
+  color: $color-text;
   line-height: 1.6;
   font-weight: $font-weight-regular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 h1,
@@ -29,8 +34,9 @@ h4,
 h5,
 h6 {
   font-weight: $font-weight-bold;
-  line-height: 1.2;
+  line-height: 1.15;
   margin-bottom: $spacing-md;
+  color: $color-white;
 }
 
 h1 {
@@ -39,7 +45,7 @@ h1 {
     font-size: 2.5rem;
   }
   @include responsive-mobile {
-    font-size: 1.875rem;
+    font-size: 2rem;
   }
 }
 
@@ -62,54 +68,55 @@ h3 {
 
 p {
   margin-bottom: $spacing-md;
-  color: $color-gray-light;
+  color: $color-text-muted;
   font-size: $font-size-body;
+  line-height: 1.7;
 }
 
 a {
-  color: $color-blue-primary;
+  color: $color-cyan;
   text-decoration: none;
   transition: $transition-smooth;
-
   &:hover {
-    color: $color-purple-primary;
+    color: $color-purple;
   }
 }
 
-/* Scrollbar personalizada */
+/* =========================================
+   Neon Scrollbar
+   ========================================= */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 6px;
 }
-
 ::-webkit-scrollbar-track {
-  background: $color-gray-bg;
+  background: $color-bg-2;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: $color-blue-primary;
-  border-radius: 6px;
-
+  background: $color-cyan;
+  border-radius: 3px;
   &:hover {
-    background: $color-purple-primary;
+    background: $color-purple;
   }
 }
 
-/* Contenedor principal */
+/* =========================================
+   Container
+   ========================================= */
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 $spacing-lg;
-
   @include responsive-tablet {
     padding: 0 $spacing-md;
   }
-
   @include responsive-mobile {
     padding: 0 $spacing-sm;
   }
 }
 
-/* Animaciones */
+/* =========================================
+   Animations
+   ========================================= */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -152,18 +159,65 @@ a {
   }
 }
 
+@keyframes neonPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes glitchShift {
+  0%,
+  90%,
+  100% {
+    clip-path: none;
+    transform: translateX(0);
+  }
+  91% {
+    clip-path: inset(20% 0 60% 0);
+    transform: translateX(-4px);
+  }
+  93% {
+    clip-path: inset(60% 0 20% 0);
+    transform: translateX(4px);
+  }
+  95% {
+    clip-path: inset(40% 0 40% 0);
+    transform: translateX(-2px);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
 .fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
 }
-
 .fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }
-
 .slide-in-left {
   animation: slideInFromLeft 0.8s ease-out forwards;
 }
-
 .slide-in-right {
   animation: slideInFromRight 0.8s ease-out forwards;
 }

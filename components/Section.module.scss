@@ -6,34 +6,34 @@
   @include responsive-tablet {
     padding: $spacing-xl 0;
   }
-
   @include responsive-mobile {
     padding: $spacing-lg 0;
   }
 
   &.default {
-    background-color: $color-white;
+    background-color: $color-bg;
   }
 
   &.gradient {
-    @include gradient-primary;
-    color: $color-white;
-
-    h2,
-    h3,
-    h4 {
-      color: $color-white;
-    }
-
-    p {
-      color: rgba($color-white, 0.9);
-    }
+    background:
+      radial-gradient(
+        ellipse at top left,
+        rgba($color-cyan, 0.1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at bottom right,
+        rgba($color-purple, 0.1) 0%,
+        transparent 50%
+      ),
+      $color-bg;
+    position: relative;
   }
 
   &.light {
-    background-color: $color-gray-bg;
-    border-top: 1px solid rgba($color-blue-primary, 0.1);
-    border-bottom: 1px solid rgba($color-blue-primary, 0.1);
+    background-color: $color-bg-2;
+    border-top: 1px solid rgba($color-cyan, 0.08);
+    border-bottom: 1px solid rgba($color-cyan, 0.08);
   }
 
   .header {
@@ -45,13 +45,18 @@
     }
 
     .title {
-      margin-bottom: $spacing-md;
+      margin-bottom: $spacing-sm;
+      background: linear-gradient(90deg, $color-white 60%, $color-cyan 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .subtitle {
-      font-size: 1.125rem;
+      font-size: 1.1rem;
       max-width: 600px;
       margin: 0 auto;
+      color: $color-text-muted;
     }
   }
 }

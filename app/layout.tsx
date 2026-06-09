@@ -1,7 +1,10 @@
 import "@/styles/globals.scss";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 const siteUrl = "https://trenkit.com";
+
+const GTM_ID = "GTM-NFJWS2NH";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -58,6 +61,38 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Trenkit",
+  url: siteUrl,
+  logo: `${siteUrl}/trenkit_logo.png`,
+  description:
+    "Trenkit is a development studio that builds high-performance mobile applications and video games for iOS, Android, and Web.",
+  foundingDate: "2025",
+  sameAs: [
+    // TODO: add your real profile URLs (LinkedIn, X/Twitter, Instagram, GitHub, etc.)
+    // "https://www.linkedin.com/company/trenkit",
+    // "https://twitter.com/trenkit",
+  ],
+  knowsAbout: [
+    "Mobile App Development",
+    "Video Game Development",
+    "iOS Development",
+    "Android Development",
+    "Unity Game Development",
+    "React Native",
+    "Next.js Web Applications",
+  ],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Trenkit",
+  url: siteUrl,
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -67,6 +102,27 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
+          }}
+        />
+        {/* Google Tag Manager */}
+        <Script id="gtm-base" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`}
+        </Script>
+        {/* End Google Tag Manager */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#00e5ff" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -80,7 +136,19 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+        {children}
+      </body>
     </html>
   );
 }

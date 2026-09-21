@@ -17,6 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/games", changeFrequency: "monthly", priority: 0.9 },
     { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
     { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
+    // Páginas legales de la app IPTV Viewer (Google Play exige una política
+    // de privacidad y una URL de eliminación de datos propias de la app).
+    { path: "/iptv-viewer/privacy", changeFrequency: "yearly", priority: 0.3 },
+    { path: "/iptv-viewer/delete-data", changeFrequency: "yearly", priority: 0.3 },
   ];
 
   return routes.map(({ path, changeFrequency, priority }) => ({

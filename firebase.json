@@ -1,7 +1,11 @@
 {
   "hosting": {
     "public": "out",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "rewrites": [
       {
         "source": "/privacy",
@@ -18,6 +22,14 @@
       {
         "source": "/games",
         "destination": "/games.html"
+      },
+      {
+        "source": "/iptv-viewer/privacy",
+        "destination": "/iptv-viewer/privacy.html"
+      },
+      {
+        "source": "/iptv-viewer/delete-data",
+        "destination": "/iptv-viewer/delete-data.html"
       }
     ],
     "headers": [

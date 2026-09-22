@@ -4,14 +4,15 @@ import Footer from "@/components/Footer";
 import Section from "@/components/Section";
 import styles from "../page.module.scss";
 
-// URL de eliminación de datos declarada en Google Play para IPTV Viewer
-// (com.trenkit.iptv). Bilingüe, igual que la política: la ficha está en
-// español e inglés.
+// URL de eliminación de datos de IPTV Viewer, declarada en Google Play
+// (Android TV, com.trenkit.iptv) y en la LG Content Store (webOS,
+// com.trenkit.iptv.webos). Bilingüe, igual que la política: las fichas están
+// en español e inglés.
 
 export const metadata: Metadata = {
   title: "IPTV Viewer · Delete your data | Trenkit",
   description:
-    "How to delete the data the IPTV Viewer app for Android TV keeps, on your device and on our servers.",
+    "How to delete the data the IPTV Viewer app for Android TV and LG webOS keeps, on your device and on our servers.",
 };
 
 export default function IptvViewerDeleteDataPage() {
@@ -22,7 +23,7 @@ export default function IptvViewerDeleteDataPage() {
         <Section variant="gradient" className={styles.header}>
           <h1 style={{ color: "white" }}>IPTV Viewer · Eliminar tus datos</h1>
           <p style={{ color: "rgba(255,255,255,0.9)" }}>
-            Android TV · com.trenkit.iptv · Delete your data
+            Android TV · com.trenkit.iptv · LG webOS · com.trenkit.iptv.webos
           </p>
         </Section>
 
@@ -38,7 +39,8 @@ export default function IptvViewerDeleteDataPage() {
 
             <h3>Desde la propia app (lo más rápido)</h3>
             <p>
-              <strong>Configuración → Borrar mis datos</strong> elimina tu
+              <strong>Configuración → Borrar mis datos</strong> (igual en
+              Android TV y en LG webOS) elimina tu
               historial de reproducción y tus favoritos de todos tus
               proveedores. Si tienes activada la sincronización, ese borrado
               también se aplica a nuestros servidores y a tus otros
@@ -105,7 +107,8 @@ export default function IptvViewerDeleteDataPage() {
 
             <h3>From the app itself (fastest)</h3>
             <p>
-              <strong>Settings → Delete my data</strong> removes your playback
+              <strong>Settings → Delete my data</strong> (the same on Android
+              TV and LG webOS) removes your playback
               history and your favourites across all your providers. If sync is
               on, that deletion also applies to our servers and to your other
               devices. It does not touch your providers, their credentials, the
@@ -162,7 +165,7 @@ export default function IptvViewerDeleteDataPage() {
             </p>
 
             <h2>Last Updated</h2>
-            <p>September 21, 2026.</p>
+            <p>September 22, 2026.</p>
           </div>
         </Section>
       </main>

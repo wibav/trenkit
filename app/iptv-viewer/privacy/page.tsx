@@ -4,7 +4,8 @@ import Footer from "@/components/Footer";
 import Section from "@/components/Section";
 import styles from "../page.module.scss";
 
-// Política ESPECÍFICA de la app IPTV Viewer (com.trenkit.iptv), separada de
+// Política ESPECÍFICA de la app IPTV Viewer —Android TV (com.trenkit.iptv) y
+// LG webOS (com.trenkit.iptv.webos)—, separada de
 // la política general de Trenkit (/privacy): Google Play compara lo que dice
 // la política con el formulario de seguridad de datos, y la general describe
 // tratamientos (contactos, SMS, llamadas, publicidad) que esta app no hace.
@@ -15,7 +16,7 @@ import styles from "../page.module.scss";
 export const metadata: Metadata = {
   title: "IPTV Viewer · Privacy Policy | Trenkit",
   description:
-    "Privacy policy for the IPTV Viewer app for Android TV (com.trenkit.iptv): what stays on your device, what reaches our servers, and for how long.",
+    "Privacy policy for the IPTV Viewer app for Android TV (com.trenkit.iptv) and LG webOS (com.trenkit.iptv.webos): what stays on your device, what reaches our servers, and for how long.",
 };
 
 export default function IptvViewerPrivacyPage() {
@@ -26,7 +27,9 @@ export default function IptvViewerPrivacyPage() {
         <Section variant="gradient" className={styles.header}>
           <h1 style={{ color: "white" }}>IPTV Viewer · Privacy Policy</h1>
           <p style={{ color: "rgba(255,255,255,0.9)" }}>
-            Android TV · com.trenkit.iptv · Effective Date: September 21, 2026
+            Android TV · com.trenkit.iptv · LG webOS · com.trenkit.iptv.webos
+            <br />
+            Effective Date: September 22, 2026
           </p>
         </Section>
 
@@ -46,9 +49,12 @@ export default function IptvViewerPrivacyPage() {
             <ul>
               <li>
                 <strong>Datos de acceso a tu proveedor</strong> (servidor,
-                usuario y contraseña, o la URL de tu lista). Se guardan cifrados
-                en el almacenamiento seguro del sistema y solo se usan para
-                conectar con ese proveedor.
+                usuario y contraseña, o la URL de tu lista). Solo se usan para
+                conectar con ese proveedor. En <strong>Android TV</strong> se
+                guardan cifrados en el almacenamiento seguro del sistema. En{" "}
+                <strong>LG webOS</strong>, que no ofrece ese almacenamiento a las
+                aplicaciones, se guardan en el almacenamiento privado de la app
+                en tu televisor, al que no tienen acceso otras aplicaciones.
               </li>
               <li>
                 El catálogo descargado, tu historial, tus favoritos y el PIN del
@@ -154,9 +160,12 @@ export default function IptvViewerPrivacyPage() {
             <ul>
               <li>
                 <strong>Your provider credentials</strong> (server, username and
-                password, or your playlist URL), stored encrypted in the
-                system&apos;s secure storage and used only to connect to that
-                provider.
+                password, or your playlist URL), used only to connect to that
+                provider. On <strong>Android TV</strong> they are stored
+                encrypted in the system&apos;s secure storage. On{" "}
+                <strong>LG webOS</strong>, which offers no such storage to apps,
+                they are kept in the app&apos;s private storage on your TV, which
+                other apps cannot access.
               </li>
               <li>
                 The downloaded catalogue, your history, your favourites and the
@@ -246,7 +255,7 @@ export default function IptvViewerPrivacyPage() {
             </p>
 
             <h2>Last Updated</h2>
-            <p>September 21, 2026.</p>
+            <p>September 22, 2026.</p>
           </div>
         </Section>
       </main>
